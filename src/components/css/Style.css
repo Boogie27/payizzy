@@ -513,6 +513,12 @@ a {
         padding: 40px 40px 0px 40px;
     }
 }
+@media only screen and (max-width: 1125px){
+    .container-two .inner-container .title-header{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 767px){
     .container-two .content-item{
         margin: 20px 0px;
