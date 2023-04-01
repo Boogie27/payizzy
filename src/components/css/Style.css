@@ -306,7 +306,7 @@ a {
 }
 .banner-content .left-side{
     left: 100px;
-    width: 50%;
+    width: 40%;
     height: 50%;
     position: relative;
     border: 1px solid #ccc;
@@ -332,6 +332,7 @@ a {
 @media only screen and (max-width: 992px){
     .banner-content .left-side{
         left: 50px;
+        width: 50%;
         height: 60%;
     }
 }
