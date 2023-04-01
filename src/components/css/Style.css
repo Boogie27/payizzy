@@ -344,13 +344,13 @@ a {
 }
 @media only screen and (max-width: 567px){
     .app-icon-container img{
-        width: 150px;
+        width: 40%;
         margin: 50px 10px;
     }
 }
 @media only screen and (max-width: 398px){
     .app-icon-container img{
-        width: 130px;
+        
         margin: 50px 10px;
     }
 }
