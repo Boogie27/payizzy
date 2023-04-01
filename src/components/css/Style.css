@@ -335,6 +335,29 @@ a {
         height: 60%;
     }
 }
+/* ------------------------------------------------- */
+/*             TO BE REMOVED IF NOT APPROVED        */
+/* ----------------------------------------------- */
+@media only screen and (max-width: 767px){
+    .banner-content .left-side{
+        display: none;
+    }
+    .banner-content .right-side{
+        width: 100%;
+    }
+    .banner-content .right-side img{
+        top: 0px;
+        width: 70%;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 567px){
+    .banner-content .right-side img{
+        width: 100%;
+        height: 130%;
+    }
+}
+/* ---------------------------------------------- */
 
 /* ************* APP ICON SECTION *********** */
 .app-icon-container{
