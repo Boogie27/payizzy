@@ -36,7 +36,7 @@ export default Home
 const HomeBanner = () => {
     return (
         <div className="home-banner">
-            <img src={app_image('28.png')} alt="banner-frame"/>
+            <img src={app_image('28.png')} className="banner-main-img" alt="banner-frame"/>
             <div className="banner-content">
                 <HomeBannerLeft/>
                 <HomeBannerRight/>
