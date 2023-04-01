@@ -331,12 +331,20 @@ a {
 }
 .banner-description{
     width: 90%;
+    height: 300px;
     display: none;
     margin: 0 auto;
-   border: 1px solid #ccc;
+    position: relative;
+   /* border: 1px solid #ccc; */
 }
 .banner-description .frame{
-
+    height: 300px;
+    display: flex;
+    position: absolute;
+}
+.banner-description .frame .frame-item{
+    width: 500px;
+    /* border: 1px solid #ccc; */
 }
 .banner-description .frame .title-header{
     width: 80%;
@@ -388,6 +396,7 @@ a {
     }
     .banner-description{
         display: block;
+        overflow: hidden;
     }
     .banner-description .frame .item-body{
         width: 100%;
@@ -403,6 +412,9 @@ a {
     }
     .banner-description .frame .frame-item p{
         font-size: 16px;
+    }
+    .banner-description .frame .frame-item{
+        width: 400px;
     }
 }
 @media only screen and (max-width: 398px){
