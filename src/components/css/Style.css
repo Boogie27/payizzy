@@ -466,6 +466,13 @@ a {
     .container-one .left-side img.icon-4{
         right: -20px;
     }
+    .container-one .right-side .body ul li{
+        width: 50px;
+        height: 50px;
+    }
+    .container-one .right-side .body ul li .icon{
+        top: 0px;
+    }
 }
 /* ************* HOME CONTAINER TWO SECTION ********* */
 .container-two{
