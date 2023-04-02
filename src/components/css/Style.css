@@ -771,6 +771,9 @@ a {
     letter-spacing: 0.005em;
     color: rgba(0, 0, 0, 0.2)
 }
+.content-four-slider{
+    margin: 50px 0px;
+}
 .content-four-slider .frame-item{
     padding: 0px 5px;
 }
