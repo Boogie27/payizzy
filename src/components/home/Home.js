@@ -17,7 +17,7 @@ const Home = ({bannerTwo, faqItems}) => {
     return (
         <div className="home-container">
             <HomeBanner/>
-            <BannerDescription/>
+            {/* <BannerDescription/> */}
             <AppIcons/>
             <ContainerOne/>
             <ContainerTwo bannerTwo={bannerTwo}/>

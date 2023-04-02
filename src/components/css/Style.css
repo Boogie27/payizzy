@@ -349,7 +349,7 @@ a {
 .banner-description{
     width: 90%;
     height: 300px;
-    display: none;
+    /* display: none; */
     margin: 0 auto;
     position: relative;
    /* border: 1px solid #ccc; */
@@ -770,6 +770,36 @@ a {
     line-height: 65px;
     letter-spacing: 0.005em;
     color: rgba(0, 0, 0, 0.2)
+}
+.content-four-slider .frame-item{
+    padding: 0px 5px;
+}
+.content-four-slider .frame-item .item{
+    width: 100%;
+    height: 85px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    justify-content: center;
+}
+.content-four-slider .frame-item .item:hover{
+    border: 1px solid rgba(111, 250, 88, 0.4);
+    background-color: rgba(111, 250, 88, 0.4);
+}
+.content-four-slider .frame-item a{
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+}
+@media only screen and (max-width: 1125px){
+    .content-four-slider .frame-item .item{
+        /* width: 150px; */
+    }
 }
 @media only screen and (max-width: 767px){
     .containe-four-container .title-header{
