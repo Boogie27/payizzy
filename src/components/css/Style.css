@@ -651,8 +651,11 @@ a {
     .inner-container{
         padding: 60px 0px;
     }
+    .container-two .inner-container .banner-title-header{
+        width: 100%;
+    }
 }
-/* ************* HOME CONTAINER ONE SECTION ********* */
+/* ************* HOME CONTAINER THREE SECTION ********* */
 .container-three{
     width: 90%;
     display: flex;
@@ -715,7 +718,7 @@ a {
 @media only screen and (max-width: 767px){
     .container-three{
         display: block;
-        padding: 100px 0px;
+        padding: 50px 0px;
     }
     .container-three .left-side,
     .container-three .right-side{
@@ -735,6 +738,9 @@ a {
     }
 }
 @media only screen and (max-width: 567px){
+    .container-three{
+        padding: 0px 0px;
+    }
     .container-three .right-side img{
         width: 200px;
     }
@@ -778,6 +784,9 @@ a {
     .containe-four-container .title-header h3{
         font-size: 40px;
         line-height: 45px;
+    }
+    .containe-four-container{
+        margin: 100px 0px 0px 0px;
     }
 }
 @media only screen and (max-width: 398px){
