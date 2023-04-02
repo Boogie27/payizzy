@@ -599,12 +599,12 @@ a {
     margin: 0 auto;
     padding-top: 60px;
 }
-.container-two .inner-container .title-header{
+.container-two .inner-container .banner-title-header{
     width: 50%;
     margin: 0 auto;
     text-align: center;
 }
-.container-two .inner-container .title-header h3{
+.container-two .inner-container .banner-title-header h3{
     font-weight: bold;
 }
 .container-two .inner-container .content-container{
@@ -629,6 +629,9 @@ a {
 }
 .container-two .content-item img{
     width: 100%;
+}
+.container-two .content-item .title-header{
+    text-align: center;
 }
 @media only screen and (min-width: 1400px){
     .container-two .item{

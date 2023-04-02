@@ -24,7 +24,7 @@ export default ContainerTwo
 
 const TitleHeader = () => {
     return (
-        <div className="title-header">
+        <div className="banner-title-header">
             <h3>We have a fast, simple, and Secure payment
                 solution for you and your customers.
             </h3>
