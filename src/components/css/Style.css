@@ -103,7 +103,7 @@ a {
         text-align: right;
     }
     .float-navigation.active .main-navi{
-        padding: 20px 43px;
+        padding: 20px 25px;
     }
 }
 @media only screen and (max-width: 567px){
@@ -751,11 +751,38 @@ a {
         font-size: 14px;
     }
 }
+/* ************* HOME CONTAINER FOUR SECTION ********* */
+.containe-four-container{
+    display: none;
+    margin: 50px 0px;
+    text-align: center;
+}
+.containe-four-container .title-header h3{
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 65px;
+    letter-spacing: 0.005em;
+    color: rgba(0, 0, 0, 0.2)
+}
+@media only screen and (max-width: 767px){
+    .containe-four-container{
+        display: block;
+    }
+}
+@media only screen and (max-width: 567px){
+    .containe-four-container .title-header h3{
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+@media only screen and (max-width: 398px){
+    .containe-four-container .title-header h3{
+        font-size: 100%;
+        line-height: 35px;
+    }
+}
 
-
-
-
-/* ************* HOME CONTAINER ONE SECTION ********* */
+/* ************* HOME CONTAINER FIVE SECTION ********* */
 .container-five-container{
     width: 90%;
     height: 550px;

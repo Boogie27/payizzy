@@ -8,6 +8,8 @@ import ContainerFive  from './ContainerFive'
 import HomeBanner  from './HomeBanner'
 import BannerDescription  from './BannerDescription'
 import Faq  from './Faq'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 
 
