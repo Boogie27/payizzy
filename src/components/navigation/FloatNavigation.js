@@ -13,8 +13,10 @@ const FloatNavigation = ({sideNav, floatNav, sideNavToggle}) => {
         <div className={`navigation-container float-navigation ${floatNav && 'active'}`}>
             <SideNavigation sideNav={sideNav} sideNavToggle={sideNavToggle}/>
             <div className="main-navi">
-                <NavigationLeft/>
-                <NavigationRight sideNavToggle={sideNavToggle} />
+                <div className="inner-main-navi">
+                    <NavigationLeft/>
+                    <NavigationRight sideNavToggle={sideNavToggle} />
+                </div>
             </div>
         </div>
     )

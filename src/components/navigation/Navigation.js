@@ -13,7 +13,7 @@ const Navigation = ({sideNav, floatNav, sideNavToggle}) => {
     return (
         <div className={`navigation-container`}>
             <SideNavigation sideNav={sideNav} sideNavToggle={sideNavToggle}/>
-            <div className="main-navi">
+            <div className="inner-main-navi">
                 <NavigationLeft/>
                 <NavigationRight sideNavToggle={sideNavToggle} />
             </div>
