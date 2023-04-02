@@ -6,18 +6,16 @@ import {
     faBars
 } from '@fortawesome/free-solid-svg-icons'
 import SideNavigation from './SideNavigation'
-import FloatNavigation from './FloatNavigation'
 
 
-const Navigation = ({sideNav, floatNav, sideNavToggle}) => {
+const FloatNavigation = ({sideNav, floatNav, sideNavToggle}) => {
     return (
-        <div className={`navigation-container`}>
+        <div className={`navigation-container float-navigation ${floatNav && 'active'}`}>
             <SideNavigation sideNav={sideNav} sideNavToggle={sideNavToggle}/>
             <div className="main-navi">
                 <NavigationLeft/>
                 <NavigationRight sideNavToggle={sideNavToggle} />
             </div>
-            <FloatNavigation sideNav={sideNav} floatNav={floatNav} sideNavToggle={sideNavToggle}/>
         </div>
     )
 }
@@ -25,7 +23,7 @@ const Navigation = ({sideNav, floatNav, sideNavToggle}) => {
 
 
 
-export default Navigation
+export default FloatNavigation
 
 
 

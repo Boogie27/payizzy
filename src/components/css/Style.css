@@ -30,16 +30,24 @@ a {
 }
 /* ***************NAVIGATION SECTION********************** */
 .navigation-container{
+    z-index: 50;
+    width: 100%;
+    position: relative;
+}
+.navigation-container .main-navi{
+    width: 90%;
+    margin: 0 auto;
     display: flex;
+    padding: 20px 0px;
     align-items: center;
-    padding: 20px 100px;
+    background-color: #fff;
     justify-content: space-between;
 }
 .navigation-container .nav-right{
-    width: 60%;
+    width: 50%;
 }
 .navigation-container .nav-left{
-    width: 40%;
+    width: 50%;
 }
 .navigation-container .nav-left img{
     width: 200px;
@@ -51,8 +59,6 @@ a {
 .navigation-container .nav-right ul li{
     cursor: pointer;
     font-size: 20px;
-    padding: 5px 10px;
-    margin: 0px 10px;
     display: inline-block;
 }
 .navigation-container .nav-right ul li a:hover{
@@ -66,10 +72,25 @@ a {
     cursor: pointer;
     color: #90EE90;
 }
-@media only screen and (max-width: 1125px){
-    .navigation-container{
-        padding: 20px 50px;
-    }
+/* ******** FLOATING NAVIGATION *************** */
+.float-navigation{
+    opacity: 0;
+    visibility: hidden;
+}
+.float-navigation.active{
+    opacity: 1;
+    height: 100px;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+.float-navigation.active .main-navi{
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+    padding: 20px 67px;
+    box-shadow: 2px 2px 4px 0px rgba(112, 250, 88, 0.274);
 }
 @media only screen and (max-width: 992px){
     .navigation-container .nav-right .nav-icon{
@@ -81,13 +102,13 @@ a {
     .navigation-container .nav-right .nav-icon{
         text-align: right;
     }
+    .float-navigation.active .main-navi{
+        padding: 20px 43px;
+    }
 }
 @media only screen and (max-width: 567px){
     .navigation-container .nav-left img{
         width: 150px;
-    }
-    .navigation-container{
-        padding: 20px 20px;
     }
 }
 
@@ -403,9 +424,12 @@ a {
     }
 }
 @media only screen and (max-width: 567px){
+    .banner-content .right-side{
+        height: 150%;
+    }
     .banner-content .right-side img{
         width: 100%;
-        height: 130%;
+        height: 100%;
     }
     .banner-description .frame .title-header h3{
         font-size: 25px;
@@ -498,8 +522,8 @@ a {
 }
 .container-one .right-side{
     width: 50%;
-    padding-left: 50px;
     display: flex;
+    padding-left: 50px;
     align-items: center;
 }
 .container-one .right-side .title-header h3{
