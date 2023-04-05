@@ -7,9 +7,10 @@ import {
 
 
 
-const Faq = ({faqItems}) => {
+const Faq = ({faqQuestion}) => {
     const [state, setState] = useState({state: false, index: ''})
 
+    
     
     const toggleItem = (index) => {
         let x = state.state === false ? true : false
@@ -20,7 +21,7 @@ const Faq = ({faqItems}) => {
 
     return (
         <div className="faq-container">
-            <LeftSide faqItems={faqItems} state={state} toggleItem={toggleItem}/>
+            <LeftSide faqQuestion={faqQuestion} state={state} toggleItem={toggleItem}/>
             <RightSide/>
         </div>
     )
@@ -41,15 +42,19 @@ export default Faq
 
 
 
-const LeftSide = ({faqItems, state, toggleItem}) => {
+const LeftSide = ({faqQuestion, state, toggleItem}) => {
+    let question = faqQuestion.question
+    question = question.length > 0 ? question : null
+    
     return (
         <div className="left-side">
             <div className="faq-item">
                 <ul>
                     {
-                        faqItems.map((item, index) => <FaqItems key={index} index={index} item={item} state={state} toggleItem={toggleItem}/>)
+                        question.map((item, index) => <FaqItems key={index} index={index} item={item} state={state} toggleItem={toggleItem}/>)
                     }
                 </ul>
+                {/* style empty faq */}
             </div>
         </div>
     )

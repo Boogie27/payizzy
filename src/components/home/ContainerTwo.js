@@ -1,4 +1,4 @@
-import {  app_image } from '../Data'
+import {  app_image } from '../File'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 

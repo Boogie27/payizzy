@@ -1,4 +1,4 @@
-import {  app_image } from '../Data'
+import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
 import ContainerOne  from './ContainerOne'
 import ContainerTwo  from './ContainerTwo'
@@ -13,7 +13,7 @@ import "react-multi-carousel/lib/styles.css";
 
 
 
-const Home = ({bannerTwo, faqItems}) => {
+const Home = ({bannerTwo, toggleFqContent, faqQuestion, faqItems}) => {
     return (
         <div className="home-container">
             <HomeBanner/>
@@ -22,8 +22,8 @@ const Home = ({bannerTwo, faqItems}) => {
             <ContainerOne/>
             <ContainerTwo bannerTwo={bannerTwo}/>
             <ContainerThree/>
-            <ContainerFour/>
-            <Faq faqItems={faqItems}/>
+            <ContainerFour faqItems={faqItems} toggleFqContent={toggleFqContent}/>
+            <Faq faqQuestion={faqQuestion}/>
             <ContainerFive/>
         </div>
     )

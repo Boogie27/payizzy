@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom'
 
 
 
-const ContainerFour = () => {
+const ContainerFour = ({faqItems, toggleFqContent}) => {
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -33,7 +33,7 @@ const ContainerFour = () => {
     return (
         <div className="containe-four-container">
             <MobileFaq/>
-            <SliderContainer responsive={responsive}/>
+            <SliderContainer faqItems={faqItems} toggleFqContent={toggleFqContent} responsive={responsive}/>
         </div>
     )
 }
@@ -53,31 +53,17 @@ const MobileFaq = ({responsive}) => {
 
 
 
-const SliderContainer = ({responsive}) => {
+const SliderContainer = ({responsive, faqItems, toggleFqContent}) => {
     return (
         <div className="content-four-slider">
             <Carousel responsive={responsive}>
-                <div className="frame-item">
-                    <NavLink to="/"><div className="item">What's New</div></NavLink>
-                </div>
-                <div className="frame-item">
-                    <NavLink to="/"><div className="item">General</div></NavLink>
-                </div>
-                <div className="frame-item">
-                    <NavLink to="/"><div className="item">Barcode & Scanning</div></NavLink>
-                </div>
-                <div className="frame-item">
-                    <NavLink to="/"><div className="item">Checkout & Payment</div></NavLink>
-                </div>
-                <div className="frame-item">
-                    <NavLink to="/"><div className="item">Clients</div></NavLink>
-                </div>
-                <div className="frame-item">
-                    <NavLink to="/"><div className="item">Boost</div></NavLink>
-                </div>
-                <div className="frame-item">
-                    <NavLink to="/"><div className="item">Online Booking</div></NavLink>
-                </div>
+                {
+                    faqItems.map((item, index) => (
+                        <div onClick={() => toggleFqContent(item)} key={index} className="frame-item">
+                            <NavLink to="/"><div className="item">{item.title}</div></NavLink>
+                        </div>
+                    ))
+                }
             </Carousel>
         </div>
     )
