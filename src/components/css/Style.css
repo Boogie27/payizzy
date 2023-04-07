@@ -394,10 +394,8 @@ a {
 /* *************** HOME SECTION ************* */
 .home-banner{
     width: 90%;
-    /* height: 500px; */
     margin: 0 auto;
     position: relative;
-    margin-top: 100px;
     margin-bottom: 100px;
 }
 .home-banner img{
@@ -425,15 +423,22 @@ a {
     width: 100%;
     height: 100%;
     position: relative;
+    transition: all 0.5s ease;
+}
+.banner-content .right-side.popin img{
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+.banner-content .right-side.popup img{
+    transform: scale(1.13);
+    transition: all 0.5s ease;
 }
 .banner-content .left-side{
+    top: 20px;
     left: 100px;
     width: 40%;
     height: 50%;
-    display: flex;
     position: relative;
-    align-items: center;
-    justify-content: center;
     /* border: 1px solid #ccc; */
 }
 .banner-content .left-side .item{
@@ -486,14 +491,22 @@ a {
     line-height: 25px;
     text-align: center;
 }
+@media only screen and (max-width: 1125px){
+    .banner-content .left-side .item h3{
+        font-size: 30px;
+    }
+}
 @media only screen and (max-width: 992px){
     .banner-content .left-side{
         left: 50px;
         width: 50%;
         height: 60%;
     }
-    .banner-content .left-side .frame-item p{
-        font-size: 16px;
+    .banner-content .left-side .item h3{
+        font-size: 25px;
+    }
+    .banner-content .left-side .item p{
+        font-size: 14px;
     }
     .banner-description .frame .title-header{
         width: 100%;

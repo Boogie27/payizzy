@@ -2,7 +2,7 @@
 import {  app_image } from '../File'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import React, { Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 
 
 
