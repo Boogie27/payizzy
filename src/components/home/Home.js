@@ -17,7 +17,7 @@ const Home = ({animate, bannerImage, bannerDesc, bannerTwo, toggleFqContent, faq
     return (
         <div className="home-container">
             <HomeBanner bannerImage={bannerImage} bannerDesc={bannerDesc} animate={animate}/>
-            {/* <BannerDescription/> */}
+            <BannerDescription bannerDesc={bannerDesc}/>
             <AppIcons/>
             <ContainerOne/>
             <ContainerTwo bannerTwo={bannerTwo}/>
