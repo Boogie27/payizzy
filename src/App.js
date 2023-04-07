@@ -56,6 +56,7 @@ function App() {
   // toggle faq items
   const toggleFqContent = (item) => {
     setFaqQuestion(item)
+    // add preloader to faq items
   }
 
   
