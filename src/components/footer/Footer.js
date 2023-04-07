@@ -36,8 +36,8 @@ const FooterTop = () => {
                 <ul>
                     <li><NavLink to="/">Who we are</NavLink></li>
                     <li><NavLink to="/">FAQ</NavLink></li>
-                    <li><NavLink to="/">PrivacyPolicy</NavLink></li>
-                    <li><NavLink to="/">TermsOfService</NavLink></li>
+                    <li><NavLink to="/">Privacy Policy</NavLink></li>
+                    <li><NavLink to="/">Terms Of Service</NavLink></li>
                     <li><NavLink to="/">Integrations</NavLink></li>
                     <li><NavLink to="/">Contact</NavLink></li>
                 </ul>

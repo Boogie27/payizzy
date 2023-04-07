@@ -14,7 +14,9 @@ import Preloader from './components/preloader/Preloader'
 // Static data for  development
 import {  
   bannerTwoStatic,
-  faqItemsStatic
+  faqItemsStatic,
+  bannerDescStatic,
+  bannerImageStatic
 } from './components/Data'
 
 
@@ -29,9 +31,11 @@ function App() {
   const [animate, setAnimate] = useState(false)
   const [sideNav, setSideNav] = useState(false)
   const [floatNav, setFloatNav] = useState(false)
+  const [bannerImage, setBannerImage] = useState(bannerImageStatic)
   const [bannerTwo, setBannerTwo] = useState(bannerTwoStatic)
   const [faqItems, setFaqItems] = useState(faqItemsStatic)
   const [faqQuestion, setFaqQuestion] = useState(faqItems[0])
+  const [bannerDesc, setBannerDesc] = useState(bannerDescStatic)
   const [isLoading, setIsLoading] = useState({state: true, text: 'Loading...', time: 3000})
   
 
@@ -115,7 +119,7 @@ function App() {
           <Fragment>
             <div className="navigation"><Navigation sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
               <Routes>
-                <Route path="/" element={<Home animate={animate} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
+                <Route path="/" element={<Home animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
               </Routes>
             <div className="footer"><Footer /></div>
           </Fragment>

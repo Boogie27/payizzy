@@ -13,10 +13,10 @@ import "react-multi-carousel/lib/styles.css";
 
 
 
-const Home = ({animate, bannerTwo, toggleFqContent, faqQuestion, faqItems}) => {
+const Home = ({animate, bannerImage, bannerDesc, bannerTwo, toggleFqContent, faqQuestion, faqItems}) => {
     return (
         <div className="home-container">
-            <HomeBanner animate={animate}/>
+            <HomeBanner bannerImage={bannerImage} bannerDesc={bannerDesc} animate={animate}/>
             {/* <BannerDescription/> */}
             <AppIcons/>
             <ContainerOne/>

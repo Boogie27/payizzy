@@ -235,7 +235,33 @@ const bannerTwoStatic = [
 
 
 
+  const bannerDescStatic = [
+    {
+      title: 'Safe, Fast And Uninterrupted Payment',
+      text: 'We follow the developing technologies  and integrate them in accordance with every infrastructue. We are at you service with 24/7 support team.'
+    },
+    {
+      title: 'Easy, Fast And Uninterrupted Payment',
+      text: 'We follow who know road. develpopment integrate them in accordance with every infrastructue. We are at you service with 24/7 support team.'
+    },
+    {
+      title: 'Secure, Fast And Uninterrupted Payment',
+      text: 'We follow the developing technologies  and integrate them in accordance with every infrastructue. We are at you service with 24/7 support team.'
+    },
+  ]
+
+
+  // home page banner image
+  const bannerImageStatic = 
+    {
+      banner_frame: '28.png',
+      banner_image: '29.png'
+    }
+  
+
   export {
     bannerTwoStatic,
-    faqItemsStatic
+    faqItemsStatic,
+    bannerDescStatic,
+    bannerImageStatic
 }
