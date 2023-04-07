@@ -1,3 +1,4 @@
+import React, { useRef } from 'react';
 import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,10 +11,17 @@ import {
 
 
 const ContainerOne = () => {
+    const ContainerOneRef = useRef()
+
+    const getOffsetTop = () => {
+        // let offsetTop  = this.instance.getBoundingClientRect().top;
+        // console.log(ContainerOneRef)
+    }
+
     return (
         <div className="container-one">
             <LeftSide/>
-            <RightSide/>
+            <RightSide getOffsetTop={getOffsetTop}/>
         </div>
     )
 }
@@ -56,9 +64,9 @@ const LeftSide = () => {
 
 
 
-const RightSide = () => {
+const RightSide = ({getOffsetTop}) => {
     return (
-        <div className="right-side">
+        <div onScroll={() => getOffsetTop()} className="right-side">
             <div className="right-inner">
                 <div className="title-header">
                     <h3>Who are we</h3>
@@ -71,24 +79,32 @@ const RightSide = () => {
                     </p>
                     <ul>
                         <li>
-                            <NavLink to="/">
-                                <FontAwesomeIcon   className="icon" icon={faFacebookF} /> 
-                            </NavLink>
+                            <div className="item item_0 active">
+                                <NavLink to="/">
+                                    <FontAwesomeIcon   className="icon" icon={faFacebookF} /> 
+                                </NavLink>
+                            </div>
                         </li>
                         <li>
-                            <NavLink to="/">
-                                <FontAwesomeIcon   className="icon" icon={faTwitter} /> 
-                            </NavLink>
+                            <div className="item item_1 active">
+                                <NavLink to="/">
+                                    <FontAwesomeIcon   className="icon" icon={faTwitter} /> 
+                                </NavLink>
+                            </div>
                         </li>
                         <li>
-                            <NavLink to="/">
-                                <FontAwesomeIcon   className="icon" icon={faInstagram} /> 
-                            </NavLink>
+                            <div className="item item_2 active">
+                                <NavLink to="/">
+                                    <FontAwesomeIcon   className="icon" icon={faInstagram} /> 
+                                </NavLink>
+                            </div>
                         </li>
                         <li>
-                            <NavLink to="/">
-                                <FontAwesomeIcon   className="icon" icon={faWhatsapp} /> 
-                            </NavLink>
+                            <div className="item item_3 active">
+                                <NavLink to="/">
+                                    <FontAwesomeIcon   className="icon" icon={faWhatsapp} /> 
+                                </NavLink>
+                            </div>
                         </li>
                     </ul>
                 </div>
