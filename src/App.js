@@ -39,7 +39,7 @@ function App() {
   const [isLoading, setIsLoading] = useState({state: true, text: 'Loading...', time: 3000})
   
 
-  // scroll window even
+  // scroll window event
   const windowsScrollEvent = () => {
     const handleScroll = event => {
       let pageScroll = window.scrollY

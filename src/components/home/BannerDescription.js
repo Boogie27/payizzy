@@ -6,7 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 
 
 const BannerDescription = ({bannerDesc}) => {
-
+    
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.

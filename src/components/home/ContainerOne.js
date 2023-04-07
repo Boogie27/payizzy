@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,16 +12,37 @@ import {
 
 const ContainerOne = () => {
     const ContainerOneRef = useRef()
+    const div = ContainerOneRef.current
+    const [state, setState] = useState(false)
 
-    const getOffsetTop = () => {
-        // let offsetTop  = this.instance.getBoundingClientRect().top;
-        // console.log(ContainerOneRef)
-    }
+    
+      // scroll window event
+  const windowsScrollEvent = () => {
+    const handleScroll = event => {
+      let pageScroll = window.scrollY
+      if(div !== undefined){
+            const { offsetTop } = div
+            if(pageScroll >= (offsetTop - 300)){
+                setState(true)
+            }else{
+                setState(false)
+            }
+      }
+
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }
+  windowsScrollEvent()
 
     return (
-        <div className="container-one">
+        <div ref={ContainerOneRef} className="container-one">
             <LeftSide/>
-            <RightSide getOffsetTop={getOffsetTop}/>
+            <RightSide state={state}/>
         </div>
     )
 }
@@ -64,9 +85,9 @@ const LeftSide = () => {
 
 
 
-const RightSide = ({getOffsetTop}) => {
+const RightSide = ({state}) => {
     return (
-        <div onScroll={() => getOffsetTop()} className="right-side">
+        <div className={`right-side ${state && 'active'}`}>
             <div className="right-inner">
                 <div className="title-header">
                     <h3>Who are we</h3>

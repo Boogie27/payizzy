@@ -617,6 +617,7 @@ a {
     width: 90%;
     display: flex;
     margin: 0 auto;
+    overflow: hidden;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -696,29 +697,29 @@ a {
     background-color: black;
     transition: all 0.3s ease;
 }
-.container-one .right-side .body ul li .item.item_0.active{
-    right: 0px;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.1s ease;
-}
-.container-one .right-side .body ul li .item.item_1.active{
+.container-one .right-side.active .body ul li .item.item_0{
     right: 0px;
     opacity: 1;
     visibility: visible;
     transition: all 0.3s ease;
 }
-.container-one .right-side .body ul li .item.item_2.active{
+.container-one .right-side.active .body ul li .item.item_1{
     right: 0px;
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease;
 }
-.container-one .right-side .body ul li .item.item_3.active{
+.container-one .right-side.active .body ul li .item.item_2{
     right: 0px;
     opacity: 1;
     visibility: visible;
     transition: all 0.7s ease;
+}
+.container-one .right-side.active .body ul li .item.item_3{
+    right: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.9s ease;
 }
 .container-one .right-side .body ul li .item:hover{
     transform: scale(1.13);
