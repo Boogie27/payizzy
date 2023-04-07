@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Fragment} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/css/Style.css'
@@ -9,6 +9,7 @@ import Navigation from './components/navigation/Navigation'
 import Footer from './components/footer/Footer'
 
 import Home from './components/home/Home'
+import Preloader from './components/preloader/Preloader'
 
 // Static data for  development
 import {  
@@ -23,11 +24,15 @@ import {
 
 function App() {
   const navScrollEffect = useRef()
+  const animateEffect = useRef()
+ 
+  const [animate, setAnimate] = useState(false)
   const [sideNav, setSideNav] = useState(false)
   const [floatNav, setFloatNav] = useState(false)
   const [bannerTwo, setBannerTwo] = useState(bannerTwoStatic)
   const [faqItems, setFaqItems] = useState(faqItemsStatic)
   const [faqQuestion, setFaqQuestion] = useState(faqItems[0])
+  const [isLoading, setIsLoading] = useState({state: true, text: 'Loading...', time: 3000})
   
 
   // scroll window even
@@ -60,20 +65,57 @@ function App() {
   }
 
   
+    // animate home banner
+    const animateBanner = () => {
+      setAnimate('popin')
+      setTimeout(() => {
+        normal() 
+        setAnimate('popup')
+      }, 2000)
+
+      // set banner to normal size
+      const normal = () => {
+        setTimeout(() => {
+          setAnimate('')
+        }, 500)
+      }
+    }
+
+
+    // set loading time
+    const preloader = () => {
+      animateBanner()
+      setTimeout(() => {
+        setIsLoading({state: false})
+      }, 1000)
+    }
+  
+
+    animateEffect.current = animateBanner
     navScrollEffect.current = windowsScrollEvent
 
     useEffect(() => {
       navScrollEffect.current()
+      animateEffect.current()
+      preloader()
     }, [])
 
 
   return (
     <div className="parent-container">
-      <div className="navigation"><Navigation sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
-        <Routes>
-          <Route path="/" element={<Home bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
-        </Routes>
-      <div className="footer"><Footer /></div>
+      {
+        isLoading.state ? (
+          <Preloader/>
+        ) : (
+          <Fragment>
+            <div className="navigation"><Navigation sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
+              <Routes>
+                <Route path="/" element={<Home animate={animate} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
+              </Routes>
+            <div className="footer"><Footer /></div>
+          </Fragment>
+        )
+      }
     </div>
   );
 }

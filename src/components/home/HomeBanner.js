@@ -6,7 +6,7 @@ import React, { useState, useEffect, Fragment } from 'react'
 
 
 
-const HomeBanner = () => {
+const HomeBanner = ({animate}) => {
 
     const responsive = {
         superLargeDesktop: {
@@ -33,7 +33,7 @@ const HomeBanner = () => {
             <img src={app_image('28.png')} className="banner-main-img" alt="banner-frame"/>
             <div className="banner-content">
                 <HomeBannerLeft responsive={responsive}/>
-                <HomeBannerRight/>
+                <HomeBannerRight animate={animate}/>
             </div>
         </div>
     )
@@ -75,9 +75,9 @@ const HomeBannerLeft = ({responsive}) => {
 
 
 
-const HomeBannerRight = () => {
+const HomeBannerRight = ({animate}) => {
     return (
-        <div className="right-side">
+        <div className={`right-side ${animate}`}>
             <img src={app_image('29.png')} alt="banner-right"/>
         </div>
     )
