@@ -68,10 +68,15 @@ function App() {
     // animate home banner
     const animateBanner = () => {
       setAnimate('popin')
-      setTimeout(() => {
-        normal() 
-        setAnimate('popup')
-      }, 2000)
+      
+      // set banner to pupup
+      const popup = () => {
+        setTimeout(() => {
+          normal() 
+          setAnimate('popup')
+        }, 2000)
+      }
+      popup()
 
       // set banner to normal size
       const normal = () => {
