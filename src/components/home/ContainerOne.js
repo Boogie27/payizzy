@@ -22,12 +22,13 @@ const ContainerOne = ({fetchElementRef}) => {
         const handleScroll = event => {
             let pageScroll = window.scrollY
             if(div !== undefined){
-                    const { offsetTop } = div
-                    if(pageScroll >= (offsetTop - 300)){
-                        setState(true)
-                    }else{
-                        setState(false)
-                    }
+                const { offsetTop } = div
+                console.log(offsetTop)
+                if(pageScroll >= (offsetTop - 300)){
+                    setState(true)
+                }else{
+                    setState(false)
+                }
             }
         };
 
@@ -37,20 +38,20 @@ const ContainerOne = ({fetchElementRef}) => {
         window.removeEventListener('scroll', handleScroll);
         };
     }
-
-  
-
-  const onLoadFunctions = () => {
-    fetchElementRef({whoWeAre: ContainerOneRef}) //fetch container offsettop
     windowsScrollEvent()
-  }
 
-
-  onLoadFunctionRef.current = onLoadFunctions //load funcitons after page loads
   
-  useEffect(() => {
-    onLoadFunctionRef.current()
-  }, [])
+
+    const onLoadFunctions = () => {
+        fetchElementRef({whoWeAre: ContainerOneRef}) //fetch container offsettop
+    }
+
+
+    onLoadFunctionRef.current = onLoadFunctions //load funcitons after page loads
+    
+    useEffect(() => {
+        onLoadFunctionRef.current()
+    }, [])
 
     return (
         <div ref={ContainerOneRef} className="container-one">
