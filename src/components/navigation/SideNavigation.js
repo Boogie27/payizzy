@@ -8,13 +8,13 @@ import {
 
 
 
-const SideNavigation = ({sideNav, blog, help, whoWeAre, integrations, scrollToSection, sideNavToggle}) => {
+const SideNavigation = ({sideNav, sections, scrollToSection, sideNavToggle}) => {
     return (
         <div className={`side-navigation ${sideNav && 'active'}`}>
             <div onClick={() => sideNavToggle(false)} className="dark-skin"></div>
             <div className="side-nav-container">
                 <SideNavHeader  sideNavToggle={sideNavToggle}/>
-                <SideNavLinks blog={blog} help={help} whoWeAre={whoWeAre} integrations={integrations} scrollToSection={scrollToSection}/>
+                <SideNavLinks sections={sections} scrollToSection={scrollToSection}/>
             </div>
         </div>
     )
@@ -49,14 +49,14 @@ const SideNavHeader = ({sideNavToggle}) => {
 
 
 
-const SideNavLinks = ({ blog, help, whoWeAre, integrations, scrollToSection}) => {
+const SideNavLinks = ({sections, scrollToSection}) => {
     return (
         <div className="side-nav-links">
             <ul>
-                <li onClick={() => scrollToSection(whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
-                <li onClick={() => scrollToSection(integrations)}><NavLink to="/">Integrations</NavLink></li>
-                <li onClick={() => scrollToSection(blog)}><NavLink to="/">Blog</NavLink></li>
-                <li onClick={() => scrollToSection(help)}><NavLink to="/">Help</NavLink></li>
+                <li onClick={() => scrollToSection(sections.whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
+                <li onClick={() => scrollToSection(sections.integrations)}><NavLink to="/">Integrations</NavLink></li>
+                <li onClick={() => scrollToSection(sections.blog)}><NavLink to="/">Blog</NavLink></li>
+                <li onClick={() => scrollToSection(sections.help)}><NavLink to="/">Help</NavLink></li>
                 <li><NavLink to="/">Register</NavLink></li>
                 <li><NavLink to="/">Login</NavLink></li>
             </ul>

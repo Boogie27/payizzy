@@ -53,19 +53,17 @@ function App() {
   const integrationsRef = useRef()
 
   const sections = {
-      blogObj: blog,
-      helpObj: help,
-      whoWeAreObj: whoWeAre,
-      integrationsObj: integrations
+      blog: blog,
+      help: help,
+      whoWeAre: whoWeAre,
+      integrations: integrations
   }
 
   const scrollToSection = (element) => {
-    const x = (element.current.offsetTop - 100)
     window.scrollTo({
-        top: x,
+        top: element.current.offsetTop - 100,
         behavior: 'smooth'
     })
-    sideNavToggle(false)
   }
 
   // page scroll effect
@@ -171,7 +169,7 @@ function App() {
           <Preloader/>
         ) : (
           <Fragment>
-            <div className="navigation"><Navigation blog={blog} help={help} whoWeAre={whoWeAre} integrations={integrations} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
+            <div className="navigation"><Navigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
               <Routes>
                 <Route path="/" element={<Home fetchElementRef={fetchElementRef} animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
               </Routes>

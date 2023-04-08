@@ -29,7 +29,6 @@ const ContainerOne = ({fetchElementRef}) => {
                         setState(false)
                     }
             }
-
         };
 
         window.addEventListener('scroll', handleScroll);

@@ -9,16 +9,16 @@ import SideNavigation from './SideNavigation'
 import FloatNavigation from './FloatNavigation'
 
 
-const Navigation = ({sideNav, blog, help, whoWeAre, integrations, scrollToSection, floatNav, sideNavToggle}) => {
+const Navigation = ({sideNav, sections, scrollToSection, floatNav, sideNavToggle}) => {
     
     return (
         <div className={`navigation-container`}>
-            <SideNavigation blog={blog} help={help} whoWeAre={whoWeAre} integrations={integrations} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle}/>
+            <SideNavigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle}/>
             <div className="inner-main-navi">
                 <NavigationLeft/>
-                <NavigationRight blog={blog} help={help} whoWeAre={whoWeAre} integrations={integrations} scrollToSection={scrollToSection} sideNavToggle={sideNavToggle} />
+                <NavigationRight sections={sections} scrollToSection={scrollToSection} sideNavToggle={sideNavToggle} />
             </div>
-            <FloatNavigation blog={blog} help={help} whoWeAre={whoWeAre} integrations={integrations} scrollToSection={scrollToSection} sideNav={sideNav} floatNav={floatNav} sideNavToggle={sideNavToggle}/>
+            <FloatNavigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} floatNav={floatNav} sideNavToggle={sideNavToggle}/>
         </div>
     )
 }
@@ -45,14 +45,14 @@ const NavigationLeft = () => {
 
 
 
-const NavigationRight = ({blog, help, whoWeAre, integrations, scrollToSection, sideNavToggle}) => {
+const NavigationRight = ({sections, scrollToSection, sideNavToggle}) => {
     return (
         <div className="nav-right">
             <ul className="nav-links">
-                <li onClick={() => scrollToSection(whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
-                <li onClick={() => scrollToSection(integrations)}><NavLink to="/">Integrations</NavLink></li>
-                <li onClick={() => scrollToSection(blog)}><NavLink to="/">Blog</NavLink></li>
-                <li onClick={() => scrollToSection(help)}><NavLink to="/">Help</NavLink></li>
+                <li onClick={() => scrollToSection(sections.whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
+                <li onClick={() => scrollToSection(sections.integrations)}><NavLink to="/">Integrations</NavLink></li>
+                <li onClick={() => scrollToSection(sections.blog)}><NavLink to="/">Blog</NavLink></li>
+                <li onClick={() => scrollToSection(sections.help)}><NavLink to="/">Help</NavLink></li>
             </ul>
             <div className="nav-icon">
                 <FontAwesomeIcon  onClick={() => sideNavToggle(true)} className="icon" icon={faBars} />
