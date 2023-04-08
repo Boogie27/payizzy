@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
     faSortDown
@@ -7,20 +7,28 @@ import {
 
 
 
-const Faq = ({faqQuestion}) => {
+const Faq = ({faqQuestion, fetchElementRef}) => {
+    const helpRef = useRef()
+    const onLoadFunctionRef = useRef()
     const [state, setState] = useState({state: false, index: ''})
 
-    
+    const onLoadFunctions = () => {
+        fetchElementRef({help: helpRef}) //fetch container offsettop
+    }
     
     const toggleItem = (index) => {
         let x = state.state === false ? true : false
         setState({state: x, index: index})
     }
 
-
+    onLoadFunctionRef.current = onLoadFunctions //load funcitons after page loads
+  
+    useEffect(() => {
+        onLoadFunctionRef.current()
+    }, [])
 
     return (
-        <div className="faq-container">
+        <div ref={helpRef} className="faq-container">
             <LeftSide faqQuestion={faqQuestion} state={state} toggleItem={toggleItem}/>
             <RightSide/>
         </div>

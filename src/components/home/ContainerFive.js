@@ -1,12 +1,27 @@
+import React, { useRef, useEffect } from 'react';
 import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
 
 
 
 
-const ContainerFive = () => {
+const ContainerFive = ({fetchElementRef}) => {
+    const blogRef = useRef()
+    const onLoadFunctionRef = useRef()
+
+    const onLoadFunctions = () => {
+        fetchElementRef({blog: blogRef}) //fetch container offsettop
+    }
+
+    onLoadFunctionRef.current = onLoadFunctions //load funcitons after page loads
+  
+    useEffect(() => {
+        onLoadFunctionRef.current()
+    }, [])
+
+
     return (
-        <div className="container-five-container">
+        <div ref={blogRef} className="container-five-container">
             <LeftSide/>
             <RightSide/>
         </div>

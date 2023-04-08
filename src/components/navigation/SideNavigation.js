@@ -1,4 +1,3 @@
-import React, {  } from 'react';
 import {  logo } from '../File'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,13 +8,13 @@ import {
 
 
 
-const SideNavigation = ({sideNav, sideNavToggle}) => {
+const SideNavigation = ({sideNav, blog, help, whoWeAre, integrations, scrollToSection, sideNavToggle}) => {
     return (
         <div className={`side-navigation ${sideNav && 'active'}`}>
             <div onClick={() => sideNavToggle(false)} className="dark-skin"></div>
             <div className="side-nav-container">
-                <SideNavHeader sideNavToggle={sideNavToggle}/>
-                <SideNavLinks/>
+                <SideNavHeader  sideNavToggle={sideNavToggle}/>
+                <SideNavLinks blog={blog} help={help} whoWeAre={whoWeAre} integrations={integrations} scrollToSection={scrollToSection}/>
             </div>
         </div>
     )
@@ -50,14 +49,14 @@ const SideNavHeader = ({sideNavToggle}) => {
 
 
 
-const SideNavLinks = () => {
+const SideNavLinks = ({ blog, help, whoWeAre, integrations, scrollToSection}) => {
     return (
         <div className="side-nav-links">
             <ul>
-                <li><NavLink to="/">Who we are</NavLink></li>
-                <li><NavLink to="/">Integrations</NavLink></li>
-                <li><NavLink to="/">Blog</NavLink></li>
-                <li><NavLink to="/">Help</NavLink></li>
+                <li onClick={() => scrollToSection(whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
+                <li onClick={() => scrollToSection(integrations)}><NavLink to="/">Integrations</NavLink></li>
+                <li onClick={() => scrollToSection(blog)}><NavLink to="/">Blog</NavLink></li>
+                <li onClick={() => scrollToSection(help)}><NavLink to="/">Help</NavLink></li>
                 <li><NavLink to="/">Register</NavLink></li>
                 <li><NavLink to="/">Login</NavLink></li>
             </ul>

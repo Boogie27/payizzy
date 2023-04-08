@@ -1,13 +1,28 @@
 import {  app_image } from '../File'
+import React, { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
     faCircle,
  } from '@fortawesome/free-solid-svg-icons'
 
 
-const ContainerThree = () => {
+const ContainerThree = ({fetchElementRef}) => {
+    const integrationsRef = useRef()
+    const onLoadFunctionRef = useRef()
+
+    const onLoadFunctions = () => {
+        fetchElementRef({integrations: integrationsRef}) //fetch container offsettop
+    }
+
+
+    onLoadFunctionRef.current = onLoadFunctions //load funcitons after page loads
+  
+    useEffect(() => {
+        onLoadFunctionRef.current()
+    }, [])
+
     return (
-        <div className="container-three">
+        <div ref={integrationsRef} className="container-three">
             <LeftSide/>
             <RightSide/>
         </div>

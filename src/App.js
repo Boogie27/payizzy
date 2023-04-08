@@ -27,6 +27,13 @@ import {
 function App() {
   const navScrollEffect = useRef()
   const animateEffect = useRef()
+  const preloaderEffect = useRef()
+
+  // smooth scroll state
+  const [help, setHelp] = useState('')
+  const [blog, setBlog] = useState('')
+  const [whoWeAre, setWhoWeAre] = useState('')
+  const [integrations, setIntegrations] = useState('')
  
   const [animate, setAnimate] = useState(false)
   const [sideNav, setSideNav] = useState(false)
@@ -38,6 +45,51 @@ function App() {
   const [bannerDesc, setBannerDesc] = useState(bannerDescStatic)
   const [isLoading, setIsLoading] = useState({state: true, text: 'Loading...', time: 3000})
   
+
+  // smooth scroll to items
+  const blogRef = useRef()
+  const helpRef = useRef()
+  const whoWeAreRef = useRef()
+  const integrationsRef = useRef()
+
+  const sections = {
+      blogObj: blog,
+      helpObj: help,
+      whoWeAreObj: whoWeAre,
+      integrationsObj: integrations
+  }
+
+  const scrollToSection = (element) => {
+    const x = (element.current.offsetTop - 100)
+    window.scrollTo({
+        top: x,
+        behavior: 'smooth'
+    })
+  }
+
+  // page scroll effect
+  const fetchElementRef = (elementRef) => {
+    if(elementRef.whoWeAre){
+      if(elementRef.whoWeAre.current !== undefined){
+        setWhoWeAre(elementRef.whoWeAre)
+      }
+    }
+    if(elementRef.integrations){
+      if(elementRef.integrations.current !== undefined){
+        setIntegrations(elementRef.integrations)
+      }
+    }
+    if(elementRef.blog){
+      if(elementRef.blog.current !== undefined){
+        setBlog(elementRef.blog)
+      }
+    }
+    if(elementRef.help){
+      if(elementRef.help.current !== undefined){
+        setHelp(elementRef.help)
+      }
+    }
+  }
 
   // scroll window event
   const windowsScrollEvent = () => {
@@ -102,11 +154,12 @@ function App() {
 
     animateEffect.current = animateBanner
     navScrollEffect.current = windowsScrollEvent
+    preloaderEffect.current = preloader
 
     useEffect(() => {
       navScrollEffect.current()
       animateEffect.current()
-      preloader()
+      preloaderEffect.current()
     }, [])
 
 
@@ -117,9 +170,9 @@ function App() {
           <Preloader/>
         ) : (
           <Fragment>
-            <div className="navigation"><Navigation sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
+            <div className="navigation"><Navigation blog={blog} help={help} whoWeAre={whoWeAre} integrations={integrations} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
               <Routes>
-                <Route path="/" element={<Home animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
+                <Route path="/" element={<Home fetchElementRef={fetchElementRef} animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
               </Routes>
             <div className="footer"><Footer /></div>
           </Fragment>

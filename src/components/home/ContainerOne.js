@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,34 +10,48 @@ import {
  } from '@fortawesome/free-brands-svg-icons'
 
 
-const ContainerOne = () => {
+const ContainerOne = ({fetchElementRef}) => {
     const ContainerOneRef = useRef()
+    const onLoadFunctionRef = useRef()
     const div = ContainerOneRef.current
     const [state, setState] = useState(false)
 
     
       // scroll window event
-  const windowsScrollEvent = () => {
-    const handleScroll = event => {
-      let pageScroll = window.scrollY
-      if(div !== undefined){
-            const { offsetTop } = div
-            if(pageScroll >= (offsetTop - 300)){
-                setState(true)
-            }else{
-                setState(false)
+    const windowsScrollEvent = () => {
+        const handleScroll = event => {
+            let pageScroll = window.scrollY
+            if(div !== undefined){
+                    const { offsetTop } = div
+                    if(pageScroll >= (offsetTop - 300)){
+                        setState(true)
+                    }else{
+                        setState(false)
+                    }
             }
-      }
 
-    };
+        };
 
-    window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }
+
+  
+
+  const onLoadFunctions = () => {
+    fetchElementRef({whoWeAre: ContainerOneRef}) //fetch container offsettop
+    windowsScrollEvent()
   }
-  windowsScrollEvent()
+
+
+  onLoadFunctionRef.current = onLoadFunctions //load funcitons after page loads
+  
+  useEffect(() => {
+    onLoadFunctionRef.current()
+  }, [])
 
     return (
         <div ref={ContainerOneRef} className="container-one">

@@ -1,3 +1,4 @@
+
 import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
 import ContainerOne  from './ContainerOne'
@@ -8,23 +9,23 @@ import ContainerFive  from './ContainerFive'
 import HomeBanner  from './HomeBanner'
 import BannerDescription  from './BannerDescription'
 import Faq  from './Faq'
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 
 
 
-const Home = ({animate, bannerImage, bannerDesc, bannerTwo, toggleFqContent, faqQuestion, faqItems}) => {
+const Home = ({animate, fetchElementRef, bannerImage, bannerDesc, bannerTwo, toggleFqContent, faqQuestion, faqItems}) => {
+    
+
     return (
         <div className="home-container">
             <HomeBanner bannerImage={bannerImage} bannerDesc={bannerDesc} animate={animate}/>
             <BannerDescription bannerDesc={bannerDesc}/>
             <AppIcons/>
-            <ContainerOne/>
+            <ContainerOne fetchElementRef={fetchElementRef}/>
             <ContainerTwo bannerTwo={bannerTwo}/>
-            <ContainerThree/>
+            <ContainerThree fetchElementRef={fetchElementRef}/>
             <ContainerFour faqItems={faqItems} toggleFqContent={toggleFqContent}/>
-            <Faq faqQuestion={faqQuestion}/>
-            <ContainerFive/>
+            <Faq fetchElementRef={fetchElementRef} faqQuestion={faqQuestion}/>
+            <ContainerFive fetchElementRef={fetchElementRef}/>
         </div>
     )
 }
