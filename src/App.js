@@ -9,6 +9,7 @@ import Navigation from './components/navigation/Navigation'
 import Footer from './components/footer/Footer'
 
 import Home from './components/home/Home'
+import Blog from './components/blog/Blog'
 import Preloader from './components/preloader/Preloader'
 
 // Static data for  development
@@ -173,6 +174,7 @@ function App() {
             <div className="navigation"><Navigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
               <Routes>
                 <Route path="/" element={<Home fetchElementRef={fetchElementRef} animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
+                <Route path="/blog" element={<Blog/>}/>
               </Routes>
             <div className="footer"><Footer /></div>
           </Fragment>

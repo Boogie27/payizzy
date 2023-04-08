@@ -48,7 +48,7 @@ const LeftSide = () => {
                     <img src={app_image('37.svg')} alt="blog-icon"/>
                 </div>
                 <div className="item-link">
-                    <NavLink to="/">Learn more</NavLink>
+                    <NavLink to="/blog">Learn more</NavLink>
                 </div>
             </div>
         </div>
