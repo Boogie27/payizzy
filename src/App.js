@@ -65,6 +65,7 @@ function App() {
         top: x,
         behavior: 'smooth'
     })
+    sideNavToggle(false)
   }
 
   // page scroll effect
