@@ -23,7 +23,6 @@ const ContainerOne = ({fetchElementRef}) => {
             let pageScroll = window.scrollY
             if(div !== undefined){
                 const { offsetTop } = div
-                console.log(offsetTop)
                 if(pageScroll >= (offsetTop - 300)){
                     setState(true)
                 }else{

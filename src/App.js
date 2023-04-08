@@ -64,6 +64,7 @@ function App() {
         top: element.current.offsetTop - 100,
         behavior: 'smooth'
     })
+    sideNavToggle(false)
   }
 
   // page scroll effect
