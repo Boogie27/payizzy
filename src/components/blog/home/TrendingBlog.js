@@ -115,10 +115,10 @@ const RightSide = () => {
     return (
         <div className="right-side-main">
             <Row className="show-grid">
-                <Col xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
-                <Col xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
-                <Col xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
-                <Col xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
+                <Col className="item" xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
+                <Col className="item" xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
+                <Col className="item" xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
+                <Col className="item" xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
             </Row>
         </div>
     )

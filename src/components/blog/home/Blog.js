@@ -4,6 +4,9 @@ import TitleHeader from './TitleHeader'
 import BlogBanner from './BlogBanner'
 import FeaturedPost from './FeaturedPost'
 import TrendingBlog from './TrendingBlog'
+import HowTo from './HowTo'
+
+
 
 
 
@@ -16,6 +19,7 @@ const Blog = ({featuredPost}) => {
             <BlogBanner/>
             <FeaturedPost featuredPost={featuredPost}/>
             <TrendingBlog/>
+            <HowTo/>
         </div>
     )
 }
