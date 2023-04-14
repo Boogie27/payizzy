@@ -47,8 +47,8 @@ const TrandingBlogBody = () => {
     return (
         <div className="trending-blog-body">
             <Row className="show-grid">
-                <Col xs={12} sm={12} md={7} lg={7} xl={7}><LeftSide/></Col>
-                <Col xs={12} sm={12} md={5} lg={5} xl={5}><RightSide/></Col>
+                <Col xs={12} sm={12} md={12} lg={7} xl={7}><LeftSide/></Col>
+                <Col xs={12} sm={12} md={12} lg={5} xl={5}><RightSide/></Col>
             </Row>
         </div>
     )
@@ -112,6 +112,17 @@ const LeftSideFloatBottom = () => {
 
 
 const RightSide = () => {
+    return (
+        <div className="right-side-main">
+            <RightSideItem/>
+            <RightSideItem/>
+            <RightSideItem/>
+        </div>
+    )
+}
+
+
+const RightSideItem = () => {
     return (
         <div className="right-side">
             <img src={blog_img('4.png')} alt="blog-trending-1"/>

@@ -1376,7 +1376,7 @@ a {
 }
 .trending-blog-body .left-side .float-parent,
 .trending-blog-body .right-side .float-parent{
-    bottom: 100px;
+    bottom: 110px;
     z-index: 10;
     width: 100%;
     height: 1px;
@@ -1399,15 +1399,17 @@ a {
 }
 .trending-blog-body .left-side .float-content  .top .title-header h3,
 .trending-blog-body .right-side .float-content  .top .title-header h3{
+    margin: 0px;
     color: #9DD7C9;
     font-size: 22px;
 }
 .trending-blog-body .left-side .float-content .top .text p,
 .trending-blog-body .right-side .float-content .top .text p{
+    margin: 0px 0px 10px 0px;
     color: #333;
     font-size: 18px;
     font-weight: 600;
-    line-height: 25px;
+    line-height: 30px;
 }
 .trending-blog-body .left-side .float-content .float-bottom,
 .trending-blog-body .right-side .float-content .float-bottom{
@@ -1435,6 +1437,7 @@ a {
 .trending-blog-body .left-side .float-content .float-bottom .content ul li.date,
 .trending-blog-body .right-side .float-content .float-bottom .content ul li.date{
     font-size: 15px;
+    line-height: 15px;
     color: rgb(145, 145, 145);
 }
 .trending-blog-body .left-side .float-content .float-bottom .content ul li.date span .icon,
@@ -1448,6 +1451,9 @@ a {
 .trending-blog-body .right-side .float-content .float-bottom .content ul li.date span.duration{
     margin-left: 10px;
 }
+.trending-blog-body .right-side-main .right-side{
+    margin-bottom: 50px;
+}
 @media only screen and (max-width: 992px){
     .trending-blog{
         width: 100%;
@@ -1459,8 +1465,6 @@ a {
     .trending-blog-body .right-side .float-content .float-bottom .content ul li.date{
         font-size: 12px;
     }
-}
-@media only screen and (max-width: 767px){
     .trending-blog-body .left-side,
     .trending-blog-body .right-side{
         margin-bottom: 100px;
