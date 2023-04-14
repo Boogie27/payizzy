@@ -114,9 +114,12 @@ const LeftSideFloatBottom = () => {
 const RightSide = () => {
     return (
         <div className="right-side-main">
-            <RightSideItem/>
-            <RightSideItem/>
-            <RightSideItem/>
+            <Row className="show-grid">
+                <Col xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
+                <Col xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
+                <Col xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
+                <Col xs={12} sm={12} md={6} lg={12} xl={12}><RightSideItem/></Col>
+            </Row>
         </div>
     )
 }
@@ -125,7 +128,7 @@ const RightSide = () => {
 const RightSideItem = () => {
     return (
         <div className="right-side">
-            <img src={blog_img('4.png')} alt="blog-trending-1"/>
+            <img src={blog_img('5.png')} alt="blog-trending-1"/>
             <div className="float-parent">
                 <div className="float-content">
                     <RightSideFloatTop/>
