@@ -19,7 +19,7 @@ const Blog = ({featuredPost}) => {
             <BlogBanner/>
             <FeaturedPost featuredPost={featuredPost}/>
             <TrendingBlog/>
-            <HowTo/>
+            {/* <HowTo/> */}
         </div>
     )
 }
