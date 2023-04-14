@@ -1166,10 +1166,10 @@ a {
     /* border: 1px solid red; */
 }
 .blog-banner .banner-content .left-side .title-header{
-    width: 50%;
+    width: 100%;
 }
 .blog-banner .banner-content .left-side .title-header h3{
-    font-size: 35px;
+    font-size: 50px;
     font-weight: bold;
 }
 .blog-banner .banner-content .right-side img{
