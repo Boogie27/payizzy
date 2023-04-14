@@ -42,6 +42,18 @@ const app_image = (string) => {
 
 
 
+const blog_img = (string) => {
+    return 'asset/images/blog/' + string
+}
+
+
+
+const user_img = (string) => {
+    return 'asset/images/users/' + string
+}
+const avatar = (string) => {
+    return 'asset/images/users/avatar/' + string
+}
 
 
 
@@ -51,5 +63,8 @@ const app_image = (string) => {
 export {
     url,
     logo,
+    avatar,
+    user_img,
+    blog_img,
     app_image,
 }

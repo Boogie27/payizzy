@@ -251,7 +251,9 @@ const bannerTwoStatic = [
   ]
 
 
+  // ********************************************
   // home page banner image
+  //*********************************************
   const bannerImageStatic = 
     {
       banner_frame: '28.png',
@@ -259,9 +261,72 @@ const bannerTwoStatic = [
     }
   
 
+
+
+
+// ************************************************
+//              FEATURED POST
+// ************************************************
+const featuredPostStatic = [
+  {
+    _id: 1,
+    title: 'Season',
+    text: 'Young businessman and attractive model in IT service in a tech portrait.',
+    image: '3.png',
+    duration: '4 min read',
+    user: {
+      _id: 1,
+      first_name: 'John',
+      last_name: 'Doe',
+      image: '1.png',
+    },
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: 2,
+    title: 'Design',
+    text: 'Production-ready, lightweight fully customizable React carousel component that rocks supports.',
+    image: '3.png',
+    duration: '6 min read',
+    user: {
+      _id: 2,
+      first_name: 'Moses',
+      last_name: 'Okay',
+      image: '2.png',
+    },
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: 3,
+    title: 'Template',
+    text: 'Lorem ipsum dolor sit amet consectetur. Nunc ornare et lacinia on him are there.',
+    image: '3.png',
+    duration: '6 min read',
+    user: {
+      _id: 3,
+      first_name: 'Moses',
+      last_name: 'Okay',
+      image: '1.png',
+    },
+    created_at: '2022-12-04T00:00:00.000Z'
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
   export {
     bannerTwoStatic,
     faqItemsStatic,
     bannerDescStatic,
-    bannerImageStatic
+    bannerImageStatic,
+    featuredPostStatic,
 }

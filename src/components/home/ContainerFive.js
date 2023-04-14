@@ -45,7 +45,7 @@ const LeftSide = () => {
                 </div>
                 <div className="item-body">
                     <p>Lorem ipsum dolor sit amet consectetur. Nunc ornare et lacinia.</p>
-                    <img src={app_image('37.svg')} alt="blog-icon"/>
+                    <img src={app_image('38.svg')} alt="blog-icon"/>
                 </div>
                 <div className="item-link">
                     <NavLink to="/blog">Learn more</NavLink>

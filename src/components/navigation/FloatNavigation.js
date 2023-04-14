@@ -36,7 +36,7 @@ export default FloatNavigation
 const NavigationLeft = () => {
     return (
         <div className="nav-left">
-            <img src={logo('2.jpg')} alt="nav"/>
+            <NavLink to="/"><img src={logo('4.png')} alt="nav"/></NavLink>
         </div>
     )
 }

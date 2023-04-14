@@ -17,7 +17,8 @@ import {
   bannerTwoStatic,
   faqItemsStatic,
   bannerDescStatic,
-  bannerImageStatic
+  bannerImageStatic,
+  featuredPostStatic,
 } from './components/Data'
 
 
@@ -42,6 +43,7 @@ function App() {
   const [bannerImage, setBannerImage] = useState(bannerImageStatic)
   const [bannerTwo, setBannerTwo] = useState(bannerTwoStatic)
   const [faqItems, setFaqItems] = useState(faqItemsStatic)
+  const [featuredPost, setFeaturedPost] = useState(featuredPostStatic)
   const [faqQuestion, setFaqQuestion] = useState(faqItems[0])
   const [bannerDesc, setBannerDesc] = useState(bannerDescStatic)
   const [isLoading, setIsLoading] = useState({state: true, text: 'Loading...', time: 3000})
@@ -174,7 +176,7 @@ function App() {
             <div className="navigation"><Navigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
               <Routes>
                 <Route path="/" element={<Home fetchElementRef={fetchElementRef} animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
-                <Route path="/blog" element={<Blog/>}/>
+                <Route path="/blog" element={<Blog featuredPost={featuredPost}/>}/>
               </Routes>
             <div className="footer"><Footer /></div>
           </Fragment>
