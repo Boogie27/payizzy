@@ -16,6 +16,8 @@ const HowTo = () => {
         <div className="how-to-container">
             <HowToContent direction="right"/>
             <HowToContent direction="left"/>
+            <HowToContent direction="right"/>
+            <HowToContent direction="left"/>
         </div>
     )
 }
