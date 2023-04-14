@@ -128,7 +128,7 @@ const RightSide = () => {
 const RightSideItem = () => {
     return (
         <div className="right-side">
-            <img src={blog_img('5.png')} alt="blog-trending-1"/>
+            <img src={blog_img('4.png')} alt="blog-trending-1"/>
             <div className="float-parent">
                 <div className="float-content">
                     <RightSideFloatTop/>
