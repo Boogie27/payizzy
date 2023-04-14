@@ -9,7 +9,7 @@ import Navigation from './components/navigation/Navigation'
 import Footer from './components/footer/Footer'
 
 import Home from './components/home/Home'
-import Blog from './components/blog/Blog'
+import Blog from './components/blog/home/Blog'
 import Preloader from './components/preloader/Preloader'
 
 // Static data for  development

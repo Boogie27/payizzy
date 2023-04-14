@@ -1,11 +1,12 @@
 
+import Moment from 'moment';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
     faCircle,
  } from '@fortawesome/free-solid-svg-icons'
- import {  blog_img, user_img, avatar } from '../File'
+ import {  blog_img, user_img, } from '../../File'
 
 
 
@@ -81,17 +82,20 @@ const TopItem = ({item}) => {
 
 
 const BottomItem = ({item}) => {
+    const userImage = item.user.image.length > 0 ? item.user.image : 'avatar.png'
+    const date = Moment(item.created_at).format('MMM Do, YY')
+
     return (
         <div className="bottom-item">
             <div className="image">
-                <img src={user_img('1.png')} alt="user-1"/>
+                <img src={user_img(userImage)} alt="user-1"/>
             </div>
             <div className="content">
                 <ul>
                     <li className="name">{`${item.user.first_name} ${item.user.last_name}`}</li>
                     <li className="date">
-                        January 21, 2021 
-                        <span className="duration"> <FontAwesomeIcon   className="icon" icon={faCircle} /> 4 min read</span>
+                        {date} 
+                        <span className="duration"> <FontAwesomeIcon   className="icon" icon={faCircle} /> {item.duration}</span>
                     </li>
                 </ul>
             </div>

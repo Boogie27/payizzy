@@ -285,7 +285,7 @@ const featuredPostStatic = [
   {
     _id: 2,
     title: 'Design',
-    text: 'Production-ready, lightweight fully customizable React carousel component that rocks supports.',
+    text: 'Production-ready, light weight fully customizable React carousel component that rocks supports.',
     image: '3.png',
     duration: '6 min read',
     user: {
@@ -306,7 +306,7 @@ const featuredPostStatic = [
       _id: 3,
       first_name: 'Moses',
       last_name: 'Okay',
-      image: '1.png',
+      image: '',
     },
     created_at: '2022-12-04T00:00:00.000Z'
   }

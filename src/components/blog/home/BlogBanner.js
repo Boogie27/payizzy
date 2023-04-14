@@ -1,6 +1,6 @@
 
 
-import {  blog_img } from '../File'
+import {  blog_img } from '../../File'
 
 
 const BlogBanner  = () => {
