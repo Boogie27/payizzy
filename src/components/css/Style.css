@@ -1364,26 +1364,32 @@ a {
     font-weight: bold;
     text-transform: capitalize;
 }
-.trending-blog .trending-blog-body .left-side {
+.trending-blog .trending-blog-body .left-side,
+.trending-blog .trending-blog-body .right-side{
     width: 100%;
     position: relative;
 }
-.trending-blog .trending-blog-body .left-side img{
+.trending-blog .trending-blog-body .left-side img,
+.trending-blog .trending-blog-body .right-side img{
     width: 100%;
     border-radius: 10px;
 }
-.trending-blog-body .left-side .float-parent{
+.trending-blog-body .left-side .float-parent,
+.trending-blog-body .right-side .float-parent{
     bottom: 100px;
     z-index: 10;
     width: 100%;
     height: 1px;
+    cursor: pointer;
     position: absolute;
     transition: bottom 0.3s ease;
 }
-.trending-blog-body .left-side .float-parent:hover{
+.trending-blog-body .left-side .float-parent:hover,
+.trending-blog-body .right-side .float-parent:hover{
     bottom: 120px;
 }
-.trending-blog-body .left-side .float-content {
+.trending-blog-body .left-side .float-content,
+.trending-blog-body .right-side .float-content{
     width: 90%;
     margin: 0 auto;
     padding: 15px;
@@ -1391,67 +1397,100 @@ a {
     background-color: #fff;
     box-shadow: 2px 2px 4px 0px rgb(154, 154, 156);
 }
-.trending-blog-body .left-side .float-content  .top .title-header h3{
+.trending-blog-body .left-side .float-content  .top .title-header h3,
+.trending-blog-body .right-side .float-content  .top .title-header h3{
     color: #9DD7C9;
     font-size: 22px;
 }
-.trending-blog-body .left-side .float-content .top .text p{
+.trending-blog-body .left-side .float-content .top .text p,
+.trending-blog-body .right-side .float-content .top .text p{
     color: #333;
     font-size: 18px;
     font-weight: 600;
     line-height: 25px;
 }
-.trending-blog-body .left-side .float-content .float-bottom{
+.trending-blog-body .left-side .float-content .float-bottom,
+.trending-blog-body .right-side .float-content .float-bottom{
     display: flex;
 }
-.trending-blog-body .left-side .float-content .float-bottom .image{
+.trending-blog-body .left-side .float-content .float-bottom .image,
+.trending-blog-body .right-side .float-content .float-bottom .image{
     margin-right: 10px;
 }
-.trending-blog-body .left-side .float-content .float-bottom img{
+.trending-blog-body .left-side .float-content .float-bottom img,
+.trending-blog-body .right-side .float-content .float-bottom img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 1px solid rgb(219, 219, 219);
 }
-.trending-blog-body .left-side .float-content .float-bottom .content ul li{
+.trending-blog-body .left-side .float-content .float-bottom .content ul li,
+.trending-blog-body .right-side .float-content .float-bottom .content ul li{
     line-height: 25px;
 }
-.trending-blog-body .left-side .float-content .float-bottom .content ul li.name{
+.trending-blog-body .left-side .float-content .float-bottom .content ul li.name,
+.trending-blog-body .right-side .float-content .float-bottom .content ul li.name{
     font-size: 21px;
 }
-.trending-blog-body .left-side .float-content .float-bottom .content ul li.date{
+.trending-blog-body .left-side .float-content .float-bottom .content ul li.date,
+.trending-blog-body .right-side .float-content .float-bottom .content ul li.date{
     font-size: 15px;
     color: rgb(145, 145, 145);
 }
-.trending-blog-body .left-side .float-content .float-bottom .content ul li.date span .icon{
+.trending-blog-body .left-side .float-content .float-bottom .content ul li.date span .icon,
+.trending-blog-body .right-side .float-content .float-bottom .content ul li.date span .icon{
     top: -3px;
-    font-size: 10px;
+    font-size: 8px;
     color: #9DD7C9;
     position: relative;
+}
+.trending-blog-body .left-side .float-content .float-bottom .content ul li.date span.duration,
+.trending-blog-body .right-side .float-content .float-bottom .content ul li.date span.duration{
+    margin-left: 10px;
 }
 @media only screen and (max-width: 992px){
     .trending-blog{
         width: 100%;
         padding: 0px 20px 50px 20px;
     }
+    .trending-blog-body .right-side .float-content .top .text p{
+        font-size: 14px;
+    }
+    .trending-blog-body .right-side .float-content .float-bottom .content ul li.date{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .trending-blog-body .left-side,
+    .trending-blog-body .right-side{
+        margin-bottom: 100px;
+    }
 }
 @media only screen and (max-width: 567px){
     .trending-blog{
         padding: 0px 10px 50px 10px;
     }
-    .trending-blog-body .left-side .float-content {
+    .trending-blog-body .left-side .float-content ,
+    .trending-blog-body .right-side .float-content {
         width: 95%;
     }
-    .trending-blog-body .left-side .float-content .float-bottom .content ul li.date{
+    .trending-blog-body .left-side .float-content .float-bottom .content ul li.date,
+    .trending-blog-body .right-side .float-content .float-bottom .content ul li.date{
         font-size: 13px;
     }
 }
 @media only screen and (max-width: 398px){
-    .trending-blog-body .left-side .float-content .float-bottom .content ul li.date{
+    .trending-blog-body .left-side .float-content .float-bottom .content ul li.date,
+    .trending-blog-body .right-side .float-content .float-bottom .content ul li.date{
         font-size: 11px;
     }
-    .trending-blog-body .left-side .float-content .top .text p{
+    .trending-blog-body .left-side .float-content .top .text p,
+    .trending-blog-body .right-side .float-content .top .text p{
         font-size: 15px;
+    }
+    .trending-blog-body .left-side .float-content .float-bottom .content ul li.date span .icon,
+    .trending-blog-body .right-side .float-content .float-bottom .content ul li.date span .icon{
+        top: -2px;
     }
 }
 
