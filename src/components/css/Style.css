@@ -1208,24 +1208,30 @@ a {
 }
 @media only screen and (max-width: 567px){
     .blog-container .blog-banner{
-        height: 270px;
+        height: 370px;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .blog-banner .banner-content .left-side{
+        left: 10px;
+        width: 50%;
+        height: 100%;
+        position: relative;
     }
     .blog-container  .main-title-header {
         width: 100%;
         padding: 0px 10px;
     }
     .blog-container  .main-title-header h3{
-        font-size: 28px;
-    }
-    .blog-banner .banner-content .left-side .title-header h3{
-        font-size: 25px;
+        font-size: 33px;
+        color: rgb(105, 105, 105);
     }
     .blog-banner .banner-content .right-side{
         width: 100%;
     }
     .blog-banner .banner-content .right-side img{
         width: 80%;
-        height: 80%;
+        height: 100%;
         opacity: 0.5;
     }
     .blog-banner .banner-content .left-side{
@@ -1240,14 +1246,21 @@ a {
     }
     .blog-banner .banner-content .left-side .title-header h3{
         text-align: center;
+        font-size: 33px;
     }
 }
 @media only screen and (max-width: 398px){
     .blog-container .blog-banner{
-        height: 240px;
+        height: 340px;
+    }
+    .blog-banner .banner-content .right-side img{
+        width: 100%;
     }
     .blog-container  .main-title-header h3{
-        font-size: 20px;
+        font-size: 25px;
+    }
+    .blog-banner .banner-content .left-side .title-header h3{
+        font-size: 30px;
     }
 }
 /* ***************** FETAURED POST SECTION ************* */

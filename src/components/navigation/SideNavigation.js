@@ -55,7 +55,7 @@ const SideNavLinks = ({sections, scrollToSection}) => {
             <ul>
                 <li onClick={() => scrollToSection(sections.whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
                 <li onClick={() => scrollToSection(sections.integrations)}><NavLink to="/">Integrations</NavLink></li>
-                <li onClick={() => scrollToSection(sections.blog)}><NavLink to="/">Blog</NavLink></li>
+                <li><NavLink to="/blog">Blog</NavLink></li>
                 <li onClick={() => scrollToSection(sections.help)}><NavLink to="/">Help</NavLink></li>
                 <li><NavLink to="/">Register</NavLink></li>
                 <li><NavLink to="/">Login</NavLink></li>
