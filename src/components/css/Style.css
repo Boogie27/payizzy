@@ -1815,12 +1815,12 @@ a {
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
-    padding: 5px 30px;
-    background-color: #6566AA;
+    padding: 5px 30px; 
+    background-color: #3E4095;
     transition: background-color 0.4s ease;
 }
 .contact-us-body .right-side .form button:hover{
-    background-color: #3E4095;
+    background-color: #6566AA;
 }
 .contact-us-container .need-help{
     background-color: #3E4095;
