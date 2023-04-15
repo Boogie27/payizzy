@@ -107,9 +107,6 @@ a {
     width: 100%;
     position: relative;
 }
-.navigation.blue{
-    background-color: #3E4095;
-}
 .navigation-container .main-navi{
     background-color: #fff;
 }
@@ -129,7 +126,6 @@ a {
 }
 .navigation-container .nav-left img{
     width: 200px;
-    background-color: #fff;
 }
 .navigation-container .nav-right ul{
     display: flex;
@@ -151,16 +147,12 @@ a {
     cursor: pointer;
     color: #3E4095;
 }
-.navigation.blue .nav-right .nav-icon .icon{
-    color: #fff;
-}
-.navigation.blue .nav-right.main ul li a{
-    color: #fff;
-}
+
 
 /* ******** FLOATING NAVIGATION *************** */
 .float-navigation{
     opacity: 0;
+    height: 0px;
     visibility: hidden;
 }
 .float-navigation.active{
@@ -374,6 +366,7 @@ a {
     width: 90%;
     margin: 0 auto;
     position: relative;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 .home-banner img{
@@ -1750,11 +1743,8 @@ a {
     }
 }
 /* ************** CONTACT US SECTION ************* */
-.contact-us-container{
-   
-}
 .contact-us-container .main-title-header{
-    height: 170px;
+    padding: 100px 0px;
     background-color: #3E4095;
 }
 .contact-us-container .main-title-header .title-header h3{

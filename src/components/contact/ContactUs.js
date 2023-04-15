@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -8,13 +7,6 @@ import {  contact_img } from '../File'
 
 const ContactUs = ({setNavType}) => {
 
-    useEffect(() => {
-       // get pathname and set page navigatios
-        const path_name = window.location.pathname
-        if(path_name === '/contact-us'){
-            setNavType('blue')
-        }
-      }, [setNavType])
 
     return (
         <div className="contact-us-container">

@@ -44,7 +44,6 @@ function App() {
   const [animate, setAnimate] = useState(false)
   const [sideNav, setSideNav] = useState(false)
   const [floatNav, setFloatNav] = useState(false)
-  const [navType, setNavType] = useState('')
   const [bannerImage, setBannerImage] = useState(bannerImageStatic)
   const [bannerTwo, setBannerTwo] = useState(bannerTwoStatic)
   const [faqItems, setFaqItems] = useState(faqItemsStatic)
@@ -182,11 +181,11 @@ function App() {
           <Preloader/>
         ) : (
           <Fragment>
-            <div className={`navigation ${navType}`}><Navigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
+            <div className="navigation"><Navigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
               <Routes>
-                <Route path="/" element={<Home setNavType={setNavType} fetchElementRef={fetchElementRef} animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
+                <Route path="/" element={<Home fetchElementRef={fetchElementRef} animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
                 <Route path="/blog" element={<Blog featuredPost={featuredPost}/>}/>
-                <Route path="/contact-us" element={<ContactUs setNavType={setNavType}/>}/>
+                <Route path="/contact-us" element={<ContactUs />}/>
               </Routes>
             <div className="footer"><Footer /></div>
           </Fragment>
