@@ -1160,11 +1160,6 @@ a {
     left: 0px;
     position: absolute;
 }
-.blog-banner .banner-content .left-side,
-.blog-banner .banner-content .right-side{
-    /* width: 50%; */
-    /* border: 1px solid red; */
-}
 .blog-banner .banner-content .left-side .title-header{
     width: 100%;
 }
@@ -1191,13 +1186,18 @@ a {
     }
 }
 @media only screen and (max-width: 767px){
+    .blog-container .blog-banner{
+        height: 300px;
+    }
     .blog-container  .main-title-header {
         width: 90%;
     }
     .blog-banner .banner-content .left-side{
         width: 40px;
     }
-    
+    .blog-banner .banner-content .right-side img{
+        width: 150px;
+    }
 }
 @media only screen and (max-width: 567px){
     .blog-container  .main-title-header {
@@ -1549,7 +1549,7 @@ a {
 .how-to-container{
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .how-to-container .howto-content{
     display: flex;
@@ -1663,6 +1663,10 @@ a {
     }
 }
 @media only screen and (max-width: 767px){
+    .how-to-container{
+        padding: 20px 20px;
+        background-color: rgb(217, 217, 221);
+    }
     .how-to-container .howto-content .left-side{
         display: none;
     }
@@ -1670,15 +1674,17 @@ a {
         width: 100%;
         padding: 10px;
         border-radius: 5px;
+        background-color: #fff;
         border: 1px solid rgb(231, 231, 231);
     }
 }
 @media only screen and (max-width: 567px){
     .how-to-container{
-        padding: 0px 10px;
+        padding: 20px 10px;
     }
     .howto-content .right-side .right-howto-top p{
         line-height: 26px;
+        font-size: 18px;
     }
 }
 

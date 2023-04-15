@@ -3,6 +3,8 @@
 import {  blog_img } from '../../File'
 
 
+
+
 const BlogBanner  = () => {
     return (
         <div className="blog-banner">
