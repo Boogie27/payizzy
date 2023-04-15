@@ -107,6 +107,9 @@ a {
     width: 100%;
     position: relative;
 }
+.navigation.blue{
+    background-color: #3E4095;
+}
 .navigation-container .main-navi{
     background-color: #fff;
 }
@@ -147,6 +150,13 @@ a {
     cursor: pointer;
     color: #3E4095;
 }
+.navigation.blue .nav-right .nav-icon .icon{
+    color: #fff;
+}
+.navigation.blue .nav-right.main ul li a{
+    color: #fff;
+}
+
 /* ******** FLOATING NAVIGATION *************** */
 .float-navigation{
     opacity: 0;
@@ -1737,12 +1747,161 @@ a {
         font-size: 18px;
     }
 }
-
-
-
-
-
-
+/* ************** CONTACT US SECTION ************* */
+.contact-us-container{
+   
+}
+.contact-us-container .main-title-header{
+    height: 170px;
+    background-color: #3E4095;
+}
+.contact-us-container .main-title-header .title-header h3{
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+.contact-us-body{
+    width: 90%;
+    margin: 0 auto;
+    padding: 70px 0px 150px 0px;
+}
+.contact-us-body .left-side .title-header h3{
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+.contact-us-body .left-side .image{
+    width: 100%;
+    text-align: right;
+}
+.contact-us-body .left-side .image img{
+    width: 450px;
+}
+.contact-us-body .right-side .form{
+    padding-left: 20px;
+}
+.contact-us-body .right-side .form label{
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact-us-body .right-side .form input,
+.contact-us-body .right-side .form textarea{
+    border: none;
+    padding: 10px;
+    border-radius: 0px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #ccc;
+}
+.contact-us-body .right-side .form input.error,
+.contact-us-body .right-side .form textarea.error{
+    border: 1px solid rgb(185, 26, 26);
+}
+.contact-us-body .right-side .form input:focus,
+.contact-us-body .right-side .form textarea:focus{
+    outline: none;
+    box-shadow: none;
+    border-radius: 4px;
+    border: 1px solid #3E4095;
+}
+.contact-us-body .right-side .form .button{
+  margin: 30px 0px;
+}
+.contact-us-body .right-side .form button{
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px 30px;
+    background-color: #6566AA;
+    transition: background-color 0.4s ease;
+}
+.contact-us-body .right-side .form button:hover{
+    background-color: #3E4095;
+}
+.contact-us-container .need-help{
+    background-color: #3E4095;
+}
+.contact-us-container .need-help{
+    width: 100%;
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-us-container .need-help p{
+    margin: 0px;
+    color: #fff;
+    font-size: 18px;
+}
+.contact-us-container .need-help .right-side a{
+    margin: 0px 20px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.contact-us-container .need-help .right-side a:hover{
+    color: #333;
+}
+.contact-us-container .need-help .right-side img{
+    width: 20px;
+    right: -10px;
+    position: relative;
+}
+@media only screen and (max-width: 992px){
+    .contact-us-body .left-side .image img{
+        width: 100%;
+    }
+    .contact-us-body .left-side .title-header h3{
+        text-align: center;
+        font-size: 28px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .contact-us-container .need-help .right-side a{
+        font-size: 15px;
+        padding: 10px 30px;
+    }
+    .contact-us-container .need-help p{
+        font-size: 15px;
+    }
+    .contact-us-body .left-side .image{
+        text-align: center;
+    }
+    .contact-us-body .left-side .image img{
+        width: 300px;
+    }
+    .contact-us-body .right-side .form{
+        padding-left: 0px;
+    }
+    .contact-us-body .right-side .form .form-group{
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 567px){
+    .contact-us-body .left-side{
+        margin-bottom: 30px;
+    }
+    .contact-us-body .left-side .image img{
+        width: 70%;
+    }
+    .contact-us-body{
+        width: 100%;
+        padding: 70px 10px;
+    }
+    .contact-us-container .main-title-header .title-header h3{
+        font-size: 40px;
+    }
+    .contact-us-container .need-help{
+        height: inherit;
+        display: block;
+        text-align: center;
+        padding: 60px 0px;
+    }
+}
 
 
 

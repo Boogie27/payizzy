@@ -54,6 +54,11 @@ const user_img = (string) => {
 
 
 
+const contact_img = (string) => {
+    return 'asset/images/contact/' + string
+}
+
+
 
 
 
@@ -63,4 +68,5 @@ export {
     user_img,
     blog_img,
     app_image,
+    contact_img,
 }

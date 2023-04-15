@@ -10,7 +10,10 @@ import Footer from './components/footer/Footer'
 
 import Home from './components/home/Home'
 import Blog from './components/blog/home/Blog'
+import ContactUs from './components/contact/ContactUs'
 import Preloader from './components/preloader/Preloader'
+
+
 
 // Static data for  development
 import {  
@@ -30,6 +33,7 @@ function App() {
   const navScrollEffect = useRef()
   const animateEffect = useRef()
   const preloaderEffect = useRef()
+ 
 
   // smooth scroll state
   const [help, setHelp] = useState('')
@@ -40,6 +44,7 @@ function App() {
   const [animate, setAnimate] = useState(false)
   const [sideNav, setSideNav] = useState(false)
   const [floatNav, setFloatNav] = useState(false)
+  const [navType, setNavType] = useState('')
   const [bannerImage, setBannerImage] = useState(bannerImageStatic)
   const [bannerTwo, setBannerTwo] = useState(bannerTwoStatic)
   const [faqItems, setFaqItems] = useState(faqItemsStatic)
@@ -153,11 +158,14 @@ function App() {
         setIsLoading({state: false})
       }, 1000)
     }
+   
+
   
 
     animateEffect.current = animateBanner
     navScrollEffect.current = windowsScrollEvent
     preloaderEffect.current = preloader
+
 
     useEffect(() => {
       navScrollEffect.current()
@@ -165,6 +173,7 @@ function App() {
       preloaderEffect.current()
     }, [])
 
+    
 
   return (
     <div className="parent-container">
@@ -173,10 +182,11 @@ function App() {
           <Preloader/>
         ) : (
           <Fragment>
-            <div className="navigation"><Navigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
+            <div className={`navigation ${navType}`}><Navigation sections={sections} scrollToSection={scrollToSection} sideNav={sideNav} sideNavToggle={sideNavToggle} floatNav={floatNav}/></div>
               <Routes>
-                <Route path="/" element={<Home fetchElementRef={fetchElementRef} animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
+                <Route path="/" element={<Home setNavType={setNavType} fetchElementRef={fetchElementRef} animate={animate} bannerImage={bannerImage} bannerDesc={bannerDesc} bannerTwo={bannerTwo} faqItems={faqItems} faqQuestion={faqQuestion} toggleFqContent={toggleFqContent}/>}/>
                 <Route path="/blog" element={<Blog featuredPost={featuredPost}/>}/>
+                <Route path="/contact-us" element={<ContactUs setNavType={setNavType}/>}/>
               </Routes>
             <div className="footer"><Footer /></div>
           </Fragment>

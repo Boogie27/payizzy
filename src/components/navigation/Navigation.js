@@ -47,7 +47,7 @@ const NavigationLeft = () => {
 
 const NavigationRight = ({sections, scrollToSection, sideNavToggle}) => {
     return (
-        <div className="nav-right">
+        <div className="nav-right main">
             <ul className="nav-links">
                 <li onClick={() => scrollToSection(sections.whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
                 <li onClick={() => scrollToSection(sections.integrations)}><NavLink to="/">Integrations</NavLink></li>

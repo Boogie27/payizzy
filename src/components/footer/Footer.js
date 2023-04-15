@@ -39,7 +39,7 @@ const FooterTop = () => {
                     <li><NavLink to="/">Privacy Policy</NavLink></li>
                     <li><NavLink to="/">Terms Of Service</NavLink></li>
                     <li><NavLink to="/">Integrations</NavLink></li>
-                    <li><NavLink to="/">Contact</NavLink></li>
+                    <li><NavLink to="/contact-us">Contact</NavLink></li>
                 </ul>
             </div>
             <div className="footer-app-img">

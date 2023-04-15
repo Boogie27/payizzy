@@ -1,4 +1,4 @@
-
+import React, { useEffect } from 'react';
 import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
 import ContainerOne  from './ContainerOne'
@@ -12,8 +12,15 @@ import Faq  from './Faq'
 
 
 
-const Home = ({animate, fetchElementRef, bannerImage, bannerDesc, bannerTwo, toggleFqContent, faqQuestion, faqItems}) => {
+const Home = ({animate, setNavType, fetchElementRef, bannerImage, bannerDesc, bannerTwo, toggleFqContent, faqQuestion, faqItems}) => {
     
+    useEffect(() => {
+        // get pathname and set page navigatios
+        const path_name = window.location.pathname
+        if(path_name === '/'){
+            setNavType('')
+        }
+    }, [setNavType])
 
     return (
         <div className="home-container">
