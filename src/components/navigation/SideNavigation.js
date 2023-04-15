@@ -14,7 +14,7 @@ const SideNavigation = ({sideNav, sections, scrollToSection, sideNavToggle}) => 
             <div onClick={() => sideNavToggle(false)} className="dark-skin"></div>
             <div className="side-nav-container">
                 <SideNavHeader  sideNavToggle={sideNavToggle}/>
-                <SideNavLinks sections={sections} scrollToSection={scrollToSection}/>
+                <SideNavLinks sections={sections} sideNavToggle={sideNavToggle} scrollToSection={scrollToSection}/>
             </div>
         </div>
     )
@@ -49,14 +49,15 @@ const SideNavHeader = ({sideNavToggle}) => {
 
 
 
-const SideNavLinks = ({sections, scrollToSection}) => {
+const SideNavLinks = ({sections, sideNavToggle, scrollToSection}) => {
     return (
         <div className="side-nav-links">
             <ul>
                 <li onClick={() => scrollToSection(sections.whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
                 <li onClick={() => scrollToSection(sections.integrations)}><NavLink to="/">Integrations</NavLink></li>
-                <li><NavLink to="/blog">Blog</NavLink></li>
+                <li onClick={() => sideNavToggle(false)}><NavLink to="/blog">Blog</NavLink></li>
                 <li onClick={() => scrollToSection(sections.help)}><NavLink to="/">Help</NavLink></li>
+                <li onClick={() => sideNavToggle(false)}><NavLink to="/contact-us">Contact Us</NavLink></li>
                 <li><NavLink to="/">Register</NavLink></li>
                 <li><NavLink to="/">Login</NavLink></li>
             </ul>

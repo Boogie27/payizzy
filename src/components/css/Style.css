@@ -84,10 +84,10 @@ a {
 }
 @keyframes animateText{
     0%{
-        color:  #C3C4DE;
+        color: #3E4095;
     }
     80%{
-        color:  #3E4095;
+        color:  #C3C4DE;
     }
     100%{
         color: #555;
