@@ -2,6 +2,8 @@ import { NavLink } from 'react-router-dom'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import {  contact_img } from '../File'
+import BottomHelp from '../help/BottomHelp'
+
 
 
 
@@ -12,7 +14,7 @@ const ContactUs = ({setNavType}) => {
         <div className="contact-us-container">
             <TitleHeader/>
             <ContactUsBody/>
-            <NeedHelp/>
+            <BottomHelp/>
         </div>
     )
 }
@@ -98,19 +100,3 @@ const RightSide = () => {
 
 
 
-
-const NeedHelp = () =>{
-    return (
-        <div className="need-help">
-            <div className="left-side">
-                <p>Need help? We're always here for you.</p>
-            </div>
-            <div className="right-side">
-                <NavLink to="/">
-                    Chat with us live
-                    <img src={contact_img('2.svg')} alt="need-help"/>
-                </NavLink>
-            </div>
-        </div>
-    )
-}

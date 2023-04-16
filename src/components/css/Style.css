@@ -1810,38 +1810,6 @@ a {
 .contact-us-body .right-side .form button:hover{
     background-color: #6566AA;
 }
-.contact-us-container .need-help{
-    background-color: #3E4095;
-}
-.contact-us-container .need-help{
-    width: 100%;
-    margin: 0 auto;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contact-us-container .need-help p{
-    margin: 0px;
-    color: #fff;
-    font-size: 18px;
-}
-.contact-us-container .need-help .right-side a{
-    margin: 0px 20px;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 40px;
-    border-radius: 5px;
-    background-color: #fff;
-}
-.contact-us-container .need-help .right-side a:hover{
-    color: #333;
-}
-.contact-us-container .need-help .right-side img{
-    width: 20px;
-    right: -10px;
-    position: relative;
-}
 @media only screen and (max-width: 992px){
     .contact-us-body .left-side .image img{
         width: 100%;
@@ -1852,11 +1820,11 @@ a {
     }
 }
 @media only screen and (max-width: 767px){
-    .contact-us-container .need-help .right-side a{
+    .page-bottom-help .need-help .right-side a{
         font-size: 15px;
         padding: 10px 30px;
     }
-    .contact-us-container .need-help p{
+    .page-bottom-help .need-help p{
         font-size: 15px;
     }
     .contact-us-body .left-side .image{
@@ -1894,7 +1862,7 @@ a {
         color: #333;
         font-size: 40px;
     }
-    .contact-us-container .need-help{
+    .page-bottom-help .need-help{
         height: inherit;
         display: block;
         text-align: center;
@@ -1908,11 +1876,183 @@ a {
         font-size: 20px;
     }
 }
+/* *************PAGE BOTTOM HELP SECTION ******************** */
+.page-bottom-help .need-help{
+    background-color: #3E4095;
+}
+.page-bottom-help .need-help{
+    width: 100%;
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-bottom-help .need-help p{
+    margin: 0px;
+    color: #fff;
+    font-size: 18px;
+}
+.page-bottom-help .need-help .right-side a{
+    margin: 0px 20px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.page-bottom-help .need-help .right-side a:hover{
+    color: #333;
+}
+.page-bottom-help .need-help .right-side img{
+    width: 20px;
+    right: -10px;
+    position: relative;
+}
+@media only screen and (max-width: 767px){
+    .page-bottom-help .need-help .right-side a{
+        font-size: 15px;
+        padding: 10px 30px;
+    }
+    .page-bottom-help .need-help p{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 567px){
+    .page-bottom-help .need-help{
+        display: block;
+        height: inherit;
+        padding: 60px 0px;
+        margin-top: 100px;
+        text-align: center;
+    }
+}
+/* ************* HELP SECTION ******************** */
+.help-container{
 
-
-
-
-
+}
+.help-container .main-title-header{
+    text-align: center;
+    padding: 50px 0px;
+    background-color: #3E4095;
+}
+.help-container .main-title-header .title-header{
+    width: 50%;
+    margin: 0 auto;
+}
+.help-container .main-title-header .title-header h3{
+    color: #fff;
+    font-size: 40px;
+}
+.help-container .main-title-header .form{
+    margin-top: 20px;
+}
+.help-container .main-title-header .form .form-item{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 5px;
+}
+.help-container .main-title-header .form input{
+    width: 80%;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 10px;    
+    border-radius: 7px 0px 0px 7px;
+}
+.help-container .main-title-header .form input:focus,
+.help-container .main-title-header .form button:focus{
+    outline: none;
+    box-shadow: none;
+}
+.help-container .main-title-header .form button:focus{
+    border: none;
+}
+.help-container .main-title-header .form button{
+    width: 20%;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px 0px;
+    background-color: #6566AA;
+    border-radius: 0px 7px 7px 0px;
+}
+.help-container .help-body-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+.help-container .help-body-container .help-content{
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    box-shadow: 0px 6px 10px 0px rgba(51, 51, 51, 0.25);
+}
+.help-container .help-body-container .help-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px 0px #6566AA;
+}
+.help-container .help-body-container .help-content .title{
+    width: 100%;
+}
+.help-container .help-body-container .help-content .title h3{
+    font-size: 16px;
+    text-align: center;
+}
+.help-container .help-body-container .help-content .image{
+   width: 70%;
+   margin: 0 auto;
+}
+.help-container .help-body-container .help-content .image img{
+    width: 100%;
+ }
+@media only screen and (max-width: 767px){
+    .help-container .main-title-header .form input{
+        width: 70%;
+    }
+    .help-container .main-title-header .form button{
+        width: 30%;
+    }
+    .help-container .main-title-header .title-header{
+        width: 100%;
+    }
+    .help-container .main-title-header .form .form-item{
+        width: 100%;
+        padding: 0px 20px;
+    }
+}
+@media only screen and (max-width: 567px){
+    .help-container .main-title-header .title-header h3{
+        font-size: 32px;
+        padding: 0px 10px;
+    }
+    .help-container .main-title-header .form input{
+        border-radius: 5px 0px 0px 5px;
+    }
+    .help-container .main-title-header .form button{
+        border-radius: 0px 5px 5px 0px;
+    }
+    .help-container .help-body-container{
+        width: 100%;
+        padding: 50px 10px 0px 10px;
+    }
+}
+@media only screen and (max-width: 398px){
+    .help-container .main-title-header .title-header h3{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .help-container .main-title-header .title-header h3{
+        font-size: 20px;
+    }
+}
 
 
 

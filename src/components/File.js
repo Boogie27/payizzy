@@ -57,6 +57,9 @@ const user_img = (string) => {
 const contact_img = (string) => {
     return 'asset/images/contact/' + string
 }
+const help_img = (string) => {
+    return 'asset/images/help/' + string
+}
 
 
 
@@ -65,6 +68,7 @@ const contact_img = (string) => {
 export {
     url,
     logo,
+    help_img,
     user_img,
     blog_img,
     app_image,

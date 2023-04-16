@@ -51,7 +51,7 @@ const NavigationRight = ({sections, scrollToSection, sideNavToggle}) => {
                 <li onClick={() => scrollToSection(sections.whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
                 <li onClick={() => scrollToSection(sections.integrations)}><NavLink to="/">Integrations</NavLink></li>
                 <li><NavLink to="/blog">Blog</NavLink></li>
-                <li onClick={() => scrollToSection(sections.help)}><NavLink to="/">Help</NavLink></li>
+                <li><NavLink to="/help">Help</NavLink></li>
             </ul>
             <div className="nav-icon">
                 <FontAwesomeIcon  onClick={() => sideNavToggle(true)} className="icon" icon={faBars} />
