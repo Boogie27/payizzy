@@ -1123,12 +1123,10 @@ a {
 }
 
 /* ***************** BLOG SECTION ************* */
-.blog-container{
-    
-}
 .blog-container  .main-title-header {
     width: 50%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 .blog-container  .main-title-header h3{
     font-size: 38px;
@@ -1875,17 +1873,25 @@ a {
     }
 }
 @media only screen and (max-width: 567px){
+    .contact-us-container{
+        margin-top: 50px;
+    }
     .contact-us-body .left-side{
         margin-bottom: 30px;
     }
     .contact-us-body .left-side .image img{
-        width: 70%;
+        width: 90%;
     }
     .contact-us-body{
         width: 100%;
-        padding: 70px 10px;
+        padding: 0px 10px;
+    }
+    .contact-us-container .main-title-header{
+        padding: 0px 0px;
+        background-color: #fff;
     }
     .contact-us-container .main-title-header .title-header h3{
+        color: #333;
         font-size: 40px;
     }
     .contact-us-container .need-help{
@@ -1893,6 +1899,12 @@ a {
         display: block;
         text-align: center;
         padding: 60px 0px;
+    }
+    .contact-us-body .left-side .title-header{
+        margin-bottom: 30px;
+    }
+    .contact-us-body .left-side .title-header h3{
+        font-size: 20px;
     }
 }
 
