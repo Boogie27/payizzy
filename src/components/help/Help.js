@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { help_img } from '../File'
 import BottomHelp from './BottomHelp'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -62,14 +63,16 @@ const HelpBody = () => {
 
 const HelpContent = ({image, title}) => {
     return (
-        <div className="help-content">
-            <div className="image">
-                <img src={help_img(image)} alt="help-1"/>
+        <NavLink to="/help-content">
+            <div className="help-content">
+                <div className="image">
+                    <img src={help_img(image)} alt="help-1"/>
+                </div>
+                <div className="title">
+                    <h3>{title}</h3>
+                </div>
             </div>
-            <div className="title">
-                <h3>{title}</h3>
-            </div>
-        </div>
+        </NavLink>
     )
 }
 

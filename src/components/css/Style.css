@@ -2159,6 +2159,19 @@ a {
     border: 2px solid #6566AA;
     background-color: transparent;
 }
+.help-content-container .help-fetaured-post{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+.help-content-container .help-fetaured-post .title-header{
+    border-bottom: 1px solid #ccc;
+}
+.help-content-container .help-fetaured-post .title-header h3{
+    color: #404040;
+    font-size: 35px;
+    font-weight: bold;
+}
 @media only screen and (max-width: 767px){
     .help-content-container .support{
         width: 100%;

@@ -18,6 +18,7 @@ const HelpContent = () => {
             <Support/>
             <Likes/>
             <HelpfulButton/>
+            <FeaturedPost/>
             <BottomHelp/>
         </div>
     )
@@ -118,6 +119,18 @@ const HelpfulButton = () => {
                     <button type="button">No</button>
                 </li>
             </ul>
+        </div>
+    )
+}
+
+
+
+const FeaturedPost = () => {
+    return (
+        <div className="help-fetaured-post">
+            <div className="title-header">
+                <h3>Featured post</h3>
+            </div>
         </div>
     )
 }
