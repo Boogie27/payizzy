@@ -2211,22 +2211,26 @@ a {
         font-size: 30px;
     }
     .help-content-container .help-content-body .body{
-        font-size: 16px;
+        font-size: 14px;
         line-height: 25px;
     }
     .help-content-container .support{
-        font-size: 16px;
+        font-size: 14px;
         line-height: 25px;
     }
     .help-content-container .like-container .likes,
     .help-content-container .like-container .dis-likes{
         font-size: 20px;
     }
+    .help-content-container .helpful-btn ul li{
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width: 398px){
     .help-content-container .help-content-body .title-header h3{
         font-size: 27px;
     }
+
 }
 @media only screen and (max-width: 320px){
     .help-content-container .help-content-body .title-header h3{
