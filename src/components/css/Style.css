@@ -2011,8 +2011,8 @@ a {
     text-align: center;
 }
 .help-container .help-body-container .help-content .image{
-   width: 70%;
-   height: 90%;
+   width: 100%;
+   height: 100%;
    margin: 0 auto;
 }
 .help-container .help-body-container .help-content .image img{
@@ -2055,7 +2055,7 @@ a {
         font-size: 25px;
     }
     .help-container .help-body-container .help-content .image{
-        height: 70%;
+        height: 100%;
     }
     .help-container .help-body-container .help-content .title h3{
         font-size: 12px;
