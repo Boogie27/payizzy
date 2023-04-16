@@ -1931,29 +1931,29 @@ a {
 .help-container{
 
 }
-.help-container .main-title-header{
+.helper.main-title-header{
     text-align: center;
     padding: 50px 0px;
     background-color: #3E4095;
 }
-.help-container .main-title-header .title-header{
+.helper.main-title-header .title-header{
     width: 50%;
     margin: 0 auto;
 }
-.help-container .main-title-header .title-header h3{
+.helper.main-title-header .title-header h3{
     color: #fff;
     font-size: 40px;
 }
-.help-container .main-title-header .form{
+.helper.main-title-header .form{
     margin-top: 20px;
 }
-.help-container .main-title-header .form .form-item{
+.helper.main-title-header .form .form-item{
     width: 80%;
     margin: 0 auto;
     display: flex;
     border-radius: 5px;
 }
-.help-container .main-title-header .form input{
+.helper.main-title-header .form input{
     width: 80%;
     border: none;
     font-size: 16px;
@@ -1961,15 +1961,15 @@ a {
     padding: 5px 10px;    
     border-radius: 7px 0px 0px 7px;
 }
-.help-container .main-title-header .form input:focus,
-.help-container .main-title-header .form button:focus{
+.helper.main-title-header .form input:focus,
+.helper.main-title-header .form button:focus{
     outline: none;
     box-shadow: none;
 }
-.help-container .main-title-header .form button:focus{
+.helper.main-title-header .form button:focus{
     border: none;
 }
-.help-container .main-title-header .form button{
+.helper.main-title-header .form button{
     width: 20%;
     border: none;
     color: #fff;
@@ -2020,29 +2020,29 @@ a {
     height: 100%;
  }
 @media only screen and (max-width: 767px){
-    .help-container .main-title-header .form input{
+    .helper.main-title-header .form input{
         width: 70%;
     }
-    .help-container .main-title-header .form button{
+    .helper.main-title-header .form button{
         width: 30%;
     }
-    .help-container .main-title-header .title-header{
+    .helper.main-title-header .title-header{
         width: 100%;
     }
-    .help-container .main-title-header .form .form-item{
+    .helper.main-title-header .form .form-item{
         width: 100%;
         padding: 0px 20px;
     }
 }
 @media only screen and (max-width: 567px){
-    .help-container .main-title-header .title-header h3{
+    .helper.main-title-header .title-header h3{
         font-size: 32px;
         padding: 0px 10px;
     }
-    .help-container .main-title-header .form input{
+    .helper.main-title-header .form input{
         border-radius: 5px 0px 0px 5px;
     }
-    .help-container .main-title-header .form button{
+    .helper.main-title-header .form button{
         border-radius: 0px 5px 5px 0px;
     }
     .help-container .help-body-container{
@@ -2051,7 +2051,7 @@ a {
     }
 }
 @media only screen and (max-width: 398px){
-    .help-container .main-title-header .title-header h3{
+    .helper.main-title-header .title-header h3{
         font-size: 25px;
     }
     .help-container .help-body-container .help-content .image{
@@ -2062,7 +2062,7 @@ a {
     }
 }
 @media only screen and (max-width: 320px){
-    .help-container .main-title-header .title-header h3{
+    .helper.main-title-header .title-header h3{
         font-size: 20px;
     }
     .help-container .help-body-container .item{
@@ -2075,13 +2075,151 @@ a {
         height: 100%;
     }
 }
-
-
-
-
-
-
-
+/* ************* HELP CONTENT SECTION **************** */
+.help-content-container .help-content-body{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+.help-content-container .help-content-body .title-header h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+.help-content-container .help-content-body .body{
+    color: #333;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 20px 0px;
+    font-stretch: expanded;
+}
+.help-content-container .support{
+    width: 90%;
+    color: #333;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 25px;
+}
+.help-content-container .support a{
+    padding: 0px 10px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.help-content-container .support a:hover{
+    color: #6566AA;
+}
+.help-content-container .like-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 0px;
+}
+.help-content-container .like-container .likes,
+.help-content-container .like-container .dis-likes{
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.help-content-container .like-container .icon{
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.help-content-container .like-container .icon:hover{
+    color: #6566AA;
+    transform: scale(1.20);
+}
+.help-content-container .helpful-btn{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.help-content-container .helpful-btn ul li{
+    font-size: 20px;
+    display: inline-block;
+}
+.help-content-container .helpful-btn ul li button{
+    color: #333;
+    font-weight: 600;
+    padding: 3px 40px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #ccc;
+    transition: all 0.3s ease;
+}
+.help-content-container .helpful-btn ul li button.active{
+    color: #fff;
+    margin-left: 50px;
+    border: 2px solid #6566AA;
+    background-color: #6566AA;
+}
+.help-content-container .helpful-btn ul li button:hover,
+.help-content-container .helpful-btn ul li button.active:hover{
+    color: #6566AA;
+    border: 2px solid #6566AA;
+    background-color: transparent;
+}
+@media only screen and (max-width: 767px){
+    .help-content-container .support{
+        width: 100%;
+        font-size: 18px;
+        padding: 0px 10px;
+    }
+    .help-content-container .help-content-body{
+        width: 100%;
+        padding: 50px 10px;
+    }
+    .help-content-container .help-content-body .body{
+        font-size: 18px;
+    }
+    .help-content-container .help-content-body .title-header h3{
+        font-size: 35px;
+    }
+    .help-content-container .helpful-btn ul li{
+        font-size: 18px;
+        text-align: center;
+    }
+    .help-content-container .helpful-btn{
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .help-content-container .helpful-btn ul li button{
+        margin: 0px 10px;
+    }
+    .help-content-container .helpful-btn ul li button.active{
+        margin: 0px 10px;
+    }
+}
+@media only screen and (max-width: 567px){
+    .help-content-container .helpful-btn ul li{
+        display: block;
+    }
+    .help-content-container .help-content-body .title-header h3{
+        font-size: 30px;
+    }
+    .help-content-container .help-content-body .body{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .help-content-container .support{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .help-content-container .like-container .likes,
+    .help-content-container .like-container .dis-likes{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 398px){
+    .help-content-container .help-content-body .title-header h3{
+        font-size: 27px;
+    }
+}
+@media only screen and (max-width: 320px){
+    .help-content-container .help-content-body .title-header h3{
+        font-size: 24px;
+    }
+}
 
 
 

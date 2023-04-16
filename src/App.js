@@ -12,6 +12,8 @@ import Home from './components/home/Home'
 import Blog from './components/blog/home/Blog'
 import ContactUs from './components/contact/ContactUs'
 import Help from './components/help/Help'
+import HelpContent from './components/help/HelpContent'
+
 import Preloader from './components/preloader/Preloader'
 
 
@@ -188,6 +190,7 @@ function App() {
                 <Route path="/blog" element={<Blog featuredPost={featuredPost}/>}/>
                 <Route path="/contact-us" element={<ContactUs />}/>
                 <Route path="/help" element={<Help />}/>
+                <Route path="/help-content" element={<HelpContent />}/>
               </Routes>
             <div className="footer"><Footer /></div>
           </Fragment>

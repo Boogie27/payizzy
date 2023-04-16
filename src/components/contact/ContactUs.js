@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import {  contact_img } from '../File'

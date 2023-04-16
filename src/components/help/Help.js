@@ -1,7 +1,7 @@
-import { NavLink } from 'react-router-dom'
+
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import {  contact_img, help_img } from '../File'
+import { help_img } from '../File'
 import BottomHelp from './BottomHelp'
 
 
@@ -22,7 +22,7 @@ export default Help
 
 const TitleHeader = () => {
     return (
-        <div className="main-title-header">
+        <div className="helper main-title-header">
            <div className="title-header">
                 <h3>Get all the answers  you want about payizzy</h3>
            </div>
