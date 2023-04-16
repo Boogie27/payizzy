@@ -44,14 +44,14 @@ const HelpBody = () => {
     return (
         <div className="help-body-container">
             <Row className="show-grid">
-                <Col xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent/></Col>
-                <Col xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent/></Col>
-                <Col xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent/></Col>
-                <Col xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent/></Col>
-                <Col xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent/></Col>
-                <Col xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent/></Col>
-                <Col xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent/></Col>
-                <Col xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent/></Col>
+                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'1.svg'} title={'chat'}/></Col>
+                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'2.svg'} title={'QR Code Payment'}/></Col>
+                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'3.svg'} title={'Virtual Card'}/></Col>
+                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'1.svg'} title={'Dollar Card'}/></Col>
+                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'2.svg'} title={'QR Code Payment'}/></Col>
+                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'3.svg'} title={'Virtual Card'}/></Col>
+                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'1.svg'} title={'Chat'}/></Col>
+                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'3.svg'} title={'QR Code Payment'}/></Col>
             </Row>
         </div>
     )
@@ -60,14 +60,14 @@ const HelpBody = () => {
 
 
 
-const HelpContent = () => {
+const HelpContent = ({image, title}) => {
     return (
         <div className="help-content">
             <div className="image">
-                <img src={help_img('1.svg')} alt="help-1"/>
+                <img src={help_img(image)} alt="help-1"/>
             </div>
             <div className="title">
-                <h3>Payment</h3>
+                <h3>{title}</h3>
             </div>
         </div>
     )

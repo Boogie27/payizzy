@@ -1986,8 +1986,10 @@ a {
 }
 .help-container .help-body-container .help-content{
     width: 100%;
+    height: 80%;
     padding: 10px;
     cursor: pointer;
+    position: relative;
     text-align: center;
     margin-bottom: 50px;
     border-radius: 10px;
@@ -1999,7 +2001,10 @@ a {
     box-shadow: 0px 6px 10px 0px #6566AA;
 }
 .help-container .help-body-container .help-content .title{
+    left: 0px;
     width: 100%;
+    bottom: 0px;
+    position: absolute;
 }
 .help-container .help-body-container .help-content .title h3{
     font-size: 16px;
@@ -2007,10 +2012,12 @@ a {
 }
 .help-container .help-body-container .help-content .image{
    width: 70%;
+   height: 90%;
    margin: 0 auto;
 }
 .help-container .help-body-container .help-content .image img{
     width: 100%;
+    height: 100%;
  }
 @media only screen and (max-width: 767px){
     .help-container .main-title-header .form input{
@@ -2047,10 +2054,25 @@ a {
     .help-container .main-title-header .title-header h3{
         font-size: 25px;
     }
+    .help-container .help-body-container .help-content .image{
+        height: 70%;
+    }
+    .help-container .help-body-container .help-content .title h3{
+        font-size: 12px;
+    }
 }
 @media only screen and (max-width: 320px){
     .help-container .main-title-header .title-header h3{
         font-size: 20px;
+    }
+    .help-container .help-body-container .item{
+        width: 100%;
+    }
+    .help-container .help-body-container .help-content{
+        height: 200px;
+    }
+    .help-container .help-body-container .help-content .image{
+        height: 100%;
     }
 }
 
