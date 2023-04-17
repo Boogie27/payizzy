@@ -12,6 +12,9 @@ import {
 
 
 const HelpContent = () => {
+
+
+    
     return (
         <div className="help-content-container">
             <TitleHeader/>
