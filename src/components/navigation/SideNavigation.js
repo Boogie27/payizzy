@@ -55,11 +55,11 @@ const SideNavLinks = ({sections, sideNavToggle, scrollToSection}) => {
             <ul>
                 <li onClick={() => scrollToSection(sections.whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
                 <li onClick={() => scrollToSection(sections.integrations)}><NavLink to="/">Integrations</NavLink></li>
-                <li onClick={() => sideNavToggle(false)}><NavLink to="/blog">Blog</NavLink></li>
-                <li onClick={() => sideNavToggle(false)}><NavLink to="/help">Help</NavLink></li>
-                <li onClick={() => sideNavToggle(false)}><NavLink to="/contact-us">Contact Us</NavLink></li>
-                <li onClick={() => sideNavToggle(false)}><NavLink to="/">Register</NavLink></li>
-                <li onClick={() => sideNavToggle(false)}><NavLink to="/">Login</NavLink></li>
+                <li onClick={() => sideNavToggle(false, 'scroll')}><NavLink to="/blog">Blog</NavLink></li>
+                <li onClick={() => sideNavToggle(false, 'scroll')}><NavLink to="/help">Help</NavLink></li>
+                <li onClick={() => sideNavToggle(false, 'scroll')}><NavLink to="/contact-us">Contact Us</NavLink></li>
+                <li onClick={() => sideNavToggle(false, 'scroll')}><NavLink to="/">Register</NavLink></li>
+                <li onClick={() => sideNavToggle(false, 'scroll')}><NavLink to="/">Login</NavLink></li>
             </ul>
         </div>
     )

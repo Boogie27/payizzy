@@ -2159,24 +2159,44 @@ a {
     border: 2px solid #6566AA;
     background-color: transparent;
 }
-.help-content-container .help-fetaured-post{
+.help-content-container .help-featured-post{
     width: 90%;
     margin: 0 auto;
     padding: 50px 0px;
 }
-.help-content-container .help-fetaured-post .title-header{
+.help-content-container .help-featured-post .title-header{
     border-bottom: 1px solid #ccc;
 }
-.help-content-container .help-fetaured-post .title-header h3{
+.help-content-container .help-featured-post .title-header h3{
     color: #404040;
     font-size: 35px;
     font-weight: bold;
+}
+.help-fetaured-post-body ul li{
+    font-size: 18px;
+    padding: 20px 0px;
+    line-height: 25px;
+    border-bottom: 1px solid #ccc;
+}
+.help-fetaured-post-body ul li .icon{
+    font-size: 22px;
+    padding: 5px 0px;
+    margin-right: 10px;
+}
+.help-fetaured-post-body ul li a{
+    color: #333;
+    display: flex;
+    align-items: center;
 }
 @media only screen and (max-width: 767px){
     .help-content-container .support{
         width: 100%;
         font-size: 18px;
         padding: 0px 10px;
+    }
+    .help-content-container .help-featured-post{
+        width: 100%;
+        padding: 50px 10px;
     }
     .help-content-container .help-content-body{
         width: 100%;
@@ -2224,6 +2244,9 @@ a {
     }
     .help-content-container .helpful-btn ul li{
         font-size: 14px;
+    }
+    .help-fetaured-post-body ul li{
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 398px){

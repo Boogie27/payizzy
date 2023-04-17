@@ -3,6 +3,7 @@ import BottomHelp from './BottomHelp'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
+    faBars,
     faThumbsUp,
     faThumbsDown
 } from '@fortawesome/free-solid-svg-icons'
@@ -127,9 +128,37 @@ const HelpfulButton = () => {
 
 const FeaturedPost = () => {
     return (
-        <div className="help-fetaured-post">
+        <div className="help-featured-post">
             <div className="title-header">
                 <h3>Featured post</h3>
+            </div>
+            <div className="help-fetaured-post-body">
+                <ul>
+                    <li>
+                        <NavLink to="/help-content">
+                            <FontAwesomeIcon  className="icon" icon={faBars} />
+                            <span>When was Payizzy App released</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/help-content">
+                            <FontAwesomeIcon  className="icon" icon={faBars} />
+                            <span>When was Payizzy App released</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/help-content">
+                            <FontAwesomeIcon  className="icon" icon={faBars} />
+                            <span>When was Payizzy App released</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/help-content">
+                            <FontAwesomeIcon  className="icon" icon={faBars} />
+                            <span>When was Payizzy App released</span>
+                        </NavLink>
+                    </li>
+                </ul>
             </div>
         </div>
     )

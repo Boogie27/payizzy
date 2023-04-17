@@ -36,7 +36,6 @@ function App() {
   const navScrollEffect = useRef()
   const animateEffect = useRef()
   const preloaderEffect = useRef()
- 
 
   // smooth scroll state
   const [help, setHelp] = useState('')
@@ -120,8 +119,11 @@ function App() {
   }
   
   // side bar toggle
-  const sideNavToggle = (state) => {
+  const sideNavToggle = (state, scroll = null) => {
     setSideNav(state)
+    if(scroll === 'scroll'){
+      scrollToTop()
+    }
   }
 
   // toggle faq items
@@ -160,6 +162,16 @@ function App() {
         setIsLoading({state: false})
       }, 1000)
     }
+
+
+    // scroll page to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // Optional if you want to skip the scrolling animation
+    })
+  }
    
 
   
@@ -173,6 +185,8 @@ function App() {
       navScrollEffect.current()
       animateEffect.current()
       preloaderEffect.current()
+
+      
     }, [])
 
     
