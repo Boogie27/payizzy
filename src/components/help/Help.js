@@ -1,21 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useState,useEffect, useRef } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import { help_img } from '../File'
+import { help_img, preloader } from '../File'
 import BottomHelp from './BottomHelp'
 import { NavLink } from 'react-router-dom'
 
 
 
-const Help = () => {
-    const imageRef = useRef()
-    console.log(imageRef.current.complete)
+const Help = ({helpCategories}) => {
 
-    
     return (
         <div className="help-container">
             <TitleHeader/>
-            <HelpBody/>
+            <HelpBody helpCategories={helpCategories}/>
             <BottomHelp/>
         </div>
     )
@@ -45,18 +42,11 @@ const TitleHeader = () => {
 
 
 
-const HelpBody = () => {
+const HelpBody = ({helpCategories}) => {
     return (
         <div className="help-body-container">
             <Row className="show-grid">
-                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'1.svg'} title={'chat'}/></Col>
-                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'2.svg'} title={'QR Code Payment'}/></Col>
-                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'3.svg'} title={'Virtual Card'}/></Col>
-                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'1.svg'} title={'Dollar Card'}/></Col>
-                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'2.svg'} title={'QR Code Payment'}/></Col>
-                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'3.svg'} title={'Virtual Card'}/></Col>
-                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'1.svg'} title={'Chat'}/></Col>
-                <Col className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent image={'3.svg'} title={'QR Code Payment'}/></Col>
+                {helpCategories.map((item, index) => (<Col key={index} className="item" xs={6} sm={6} md={4} lg={3} xl={3}><HelpContent item={item}/></Col>))}
             </Row>
         </div>
     )
@@ -65,16 +55,54 @@ const HelpBody = () => {
 
 
 
-const HelpContent = ({image, title}) => {
+const HelpContent = ({item}) => {
+    const imageRef = useRef()
+    const checker = useRef()
+    const [imageState, setImageState] = useState(false)
+
+    // check if images has loaded
+    const imageChecker = () => {
+        if(imageRef.current !== undefined){
+            if(imageRef.current.complete){
+                setImageState(true)
+            }else{
+                setImageState(false)
+            }
+        }
+        removeLoader()
+    }
+
+
+    // remove loader after 5 seconds
+    const removeLoader = () => {
+        setTimeout(() => {
+            setImageState(true)
+        }, 5000)
+    }
+    
+    checker.current = imageChecker
+
+    useEffect(() => {
+        checker.current()
+    }, [])
+
     return (
-        <NavLink to="/help-content">
+        <NavLink to={`/help-content?details=${item._id}`}>
             <div className="help-content">
                 <div className="image">
-                    <img src={help_img(image)} alt="help-1"/>
+                    <img ref={imageRef} src={help_img(item.image)} alt="help-1"/>
                 </div>
                 <div className="title">
-                    <h3>{title}</h3>
+                    <h3>{item.title}</h3>
                 </div>
+                {
+                    imageState === false ? (
+                        <div className="preloader">
+                            <img src={preloader('1.gif')} alt="preloader-1"/>
+                        </div>
+                    ) : null
+                }
+                
             </div>
         </NavLink>
     )

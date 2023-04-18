@@ -313,6 +313,76 @@ const featuredPostStatic = [
 ]
 
 
+// ************************************************
+//              HELP 
+// ************************************************
+
+const helpCategoriesStatic = [
+  {
+    _id: '1',
+    title: 'chat',
+    image: '1.svg',
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: '2',
+    title: 'Virtual Card',
+    image: '2.svg',
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: '3',
+    title: 'QR Code Payment',
+    image: '3.svg',
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: '4',
+    title: 'Dollar Card',
+    image: '1.svg',
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: '5',
+    title: 'chat',
+    image: '2.svg',
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: '6',
+    title: 'QR Code Payment',
+    image: '3.svg',
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: '7',
+    title: 'Virtual Card',
+    image: '1.svg',
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+  {
+    _id: '8',
+    title: 'QR Code Payment',
+    image: '2.svg',
+    created_at: '2022-12-04T00:00:00.000Z'
+  },
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -329,4 +399,5 @@ const featuredPostStatic = [
     bannerDescStatic,
     bannerImageStatic,
     featuredPostStatic,
+    helpCategoriesStatic,
 }

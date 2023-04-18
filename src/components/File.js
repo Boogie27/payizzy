@@ -57,11 +57,18 @@ const user_img = (string) => {
 const contact_img = (string) => {
     return 'asset/images/contact/' + string
 }
+
+
+
 const help_img = (string) => {
     return 'asset/images/help/' + string
 }
 
 
+
+const preloader = (string) => {
+    return 'asset/preloader/' + string
+}
 
 
 
@@ -72,5 +79,6 @@ export {
     user_img,
     blog_img,
     app_image,
+    preloader,
     contact_img,
 }

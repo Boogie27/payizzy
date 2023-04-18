@@ -1986,7 +1986,7 @@ a {
 }
 .help-container .help-body-container .help-content{
     width: 100%;
-    height: 80%;
+    height: 250px;
     padding: 10px;
     cursor: pointer;
     position: relative;
@@ -2019,6 +2019,24 @@ a {
     width: 100%;
     height: 100%;
  }
+ .help-container .help-body-container .help-content .preloader{
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #fff;
+ }
+ .help-container .help-body-container .help-content .preloader img{
+    width: 20px;
+    height: 20px;
+ }
+ @media only screen and (max-width: 1125px){
+    .help-container .help-body-container .help-content{
+        height: 200px;
+    }
+ }
 @media only screen and (max-width: 767px){
     .helper.main-title-header .form input{
         width: 70%;
@@ -2040,14 +2058,17 @@ a {
         padding: 0px 10px;
     }
     .helper.main-title-header .form input{
-        border-radius: 5px 0px 0px 5px;
+        border-radius: 0px;
     }
     .helper.main-title-header .form button{
-        border-radius: 0px 5px 5px 0px;
+        border-radius: 0px;
     }
     .help-container .help-body-container{
         width: 100%;
         padding: 50px 10px 0px 10px;
+    }
+    .help-container .help-body-container .help-content{
+        height: 180px;
     }
 }
 @media only screen and (max-width: 398px){
@@ -2059,6 +2080,9 @@ a {
     }
     .help-container .help-body-container .help-content .title h3{
         font-size: 12px;
+    }
+    .help-container .help-body-container .help-content{
+        height: 150px;
     }
 }
 @media only screen and (max-width: 320px){
@@ -2166,7 +2190,7 @@ a {
     padding: 50px 0px;
 }
 .help-content-container .help-featured-post .title-header{
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
 .help-content-container .help-featured-post .title-header h3{
@@ -2237,7 +2261,7 @@ a {
     .help-fetaured-post-body ul li{
         border: none;
         border-radius: 5px;
-        margin-bottom: 20px;
+        margin: 10px 0px;
         padding: 20px 10px;
         box-shadow: 4px 6px 10px 4px rgba(51, 51, 51, 0.25);
     }
@@ -2245,6 +2269,10 @@ a {
         top: 0px;
         border: none;
         box-shadow: 4px 6px 10px 4px rgba(51, 51, 51, 0.25);
+    }
+    .help-content-container .help-featured-post .title-header{
+        padding-bottom: 10px;
+        margin-bottom: 20px;
     }
 }
 @media only screen and (max-width: 567px){
