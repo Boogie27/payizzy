@@ -1,4 +1,4 @@
-
+import React, { useRef } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { help_img } from '../File'
@@ -8,6 +8,10 @@ import { NavLink } from 'react-router-dom'
 
 
 const Help = () => {
+    const imageRef = useRef()
+    console.log(imageRef.current.complete)
+
+    
     return (
         <div className="help-container">
             <TitleHeader/>

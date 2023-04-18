@@ -6,9 +6,10 @@ import {  blog_img } from '../../File'
 
 
 const BlogBanner  = () => {
+
     return (
         <div className="blog-banner">
-            <img src={blog_img('1.png')} className="banner-bg" alt="banner-1"/>
+            <img ref={imageRef} src={blog_img('1.png')} className="banner-bg" alt="banner-1"/>
             <div className="banner-content">
                 <LeftSide/>
                 <RightSide/>
