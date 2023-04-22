@@ -1,4 +1,3 @@
-import React, { useState,useEffect, useRef } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { help_img, preloader } from '../File'
@@ -56,53 +55,15 @@ const HelpBody = ({helpCategories}) => {
 
 
 const HelpContent = ({item}) => {
-    const imageRef = useRef()
-    const checker = useRef()
-    const [imageState, setImageState] = useState(false)
-
-    // check if images has loaded
-    const imageChecker = () => {
-        if(imageRef.current !== undefined){
-            if(imageRef.current.complete){
-                setImageState(true)
-            }else{
-                setImageState(false)
-            }
-        }
-        removeLoader()
-    }
-
-
-    // remove loader after 5 seconds
-    const removeLoader = () => {
-        setTimeout(() => {
-            setImageState(true)
-        }, 5000)
-    }
-    
-    checker.current = imageChecker
-
-    useEffect(() => {
-        checker.current()
-    }, [])
-
     return (
         <NavLink to={`/help-content?details=${item._id}`}>
             <div className="help-content">
                 <div className="image">
-                    <img ref={imageRef} src={help_img(item.image)} alt="help-1"/>
+                    <img src={help_img(item.image)} alt="help-1"/>
                 </div>
                 <div className="title">
                     <h3>{item.title}</h3>
                 </div>
-                {
-                    imageState === false ? (
-                        <div className="preloader">
-                            <img src={preloader('1.gif')} alt="preloader-1"/>
-                        </div>
-                    ) : null
-                }
-                
             </div>
         </NavLink>
     )
