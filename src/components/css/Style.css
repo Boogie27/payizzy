@@ -504,7 +504,7 @@ a {
 }
 .home-banner-container .inner-banner .left .body p{
     font-size: 20px;
-    line-height: 25px;
+    line-height: 30px;
 }
 .home-banner-container .inner-banner .left .button .app-link{
     bottom: -10px;
@@ -540,11 +540,11 @@ a {
 }
 @media only screen and (max-width: 992px){
     .home-banner-container .inner-banner .left .title-header h3{
-        font-size: 30px;
+        font-size: 35px;
     }
     .home-banner-container .inner-banner .left .body p{
         font-size: 17px;
-        line-height: 20px;
+        line-height: 25px;
     }
     .home-banner-container .inner-banner .left .title-header,
     .home-banner-container .inner-banner .left .body,
@@ -559,7 +559,7 @@ a {
     .home-banner-container .inner-banner .left .image{
         display: block;
         padding-top: 20px;
-        border-radius: 20px;
+        border-radius: 10px;
         background-color: #FDB813;
     }
     .home-banner-container .inner-banner .left .button .app-link{
@@ -573,6 +573,7 @@ a {
     .home-banner-container .inner-banner .left{
         text-align: center;
     }
+    
     .home-banner-container .inner-banner .left .title-header h3{
         font-size: 40px;
     }
@@ -580,6 +581,10 @@ a {
     .home-banner-container .inner-banner .left .description .body,
     .home-banner-container .inner-banner .left .description .image{
         margin-bottom: 40px;
+    }
+    .home-banner-container .inner-banner .left .image img{
+        width: 70%;
+        height: 100%;
     }
 }
 /* ------------------------------------------------- */
