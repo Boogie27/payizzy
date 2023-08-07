@@ -62,7 +62,7 @@ const Description = ({bannerImage}) => {
             <div className="title-header">
                 <h3>Safe, fast and Uninterrupted Payment!</h3>
             </div>
-            <div claName="image">
+            <div className="image">
                 <Image bannerImage={bannerImage}/>
             </div>
             <div className="body">

@@ -1,13 +1,10 @@
-
+import {  logo } from '../File'
 
 
 const Preloader = () => {
     return (
         <div className="preloader">
-            <div className="loader-content">
-                <div className="text">Loading...</div>
-                <div className="ring"></div>
-            </div>
+            <img src={logo('logo-3.png')} alt="preloader-logo"/>
         </div>
     )
 }

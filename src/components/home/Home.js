@@ -1,12 +1,14 @@
 import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
-import ContainerOne  from './ContainerOne'
-import ContainerTwo  from './ContainerTwo'
-import ContainerThree  from './ContainerThree'
-import ContainerFour  from './ContainerFour'
-import ContainerFive  from './ContainerFive'
+// import ContainerOne  from './ContainerOne'
+// import ContainerTwo  from './ContainerTwo'
+// import ContainerThree  from './ContainerThree'
+// import ContainerFour  from './ContainerFour'
+// import ContainerFive  from './ContainerFive'
+// import BannerDescription  from './BannerDescription'
 import Banner  from './Banner'
-import BannerDescription  from './BannerDescription'
+import Services  from './Services'
+
 import Faq  from './Faq'
 
 
@@ -17,15 +19,17 @@ const Home = ({animate, setNavType, fetchElementRef, bannerImage, bannerDesc, ba
     return (
         <div className="home-container">
             {/* <HomeBanner bannerImage={bannerImage} bannerDesc={bannerDesc} animate={animate}/> */}
+            {/* <BannerDescription bannerDesc={bannerDesc}/> */}
+            {/* <AppIcons/> */}
+            {/* <ContainerOne fetchElementRef={fetchElementRef}/> */}
+            {/* <ContainerTwo bannerTwo={bannerTwo}/> */}
+            {/* <ContainerThree fetchElementRef={fetchElementRef}/> */}
+            {/* <ContainerFour faqItems={faqItems} toggleFqContent={toggleFqContent}/> */}
+            {/* <Faq fetchElementRef={fetchElementRef} faqQuestion={faqQuestion}/> */}
+            {/* <ContainerFive fetchElementRef={fetchElementRef}/> */}
+
             <Banner bannerImage={bannerImage}/>
-            <BannerDescription bannerDesc={bannerDesc}/>
-            <AppIcons/>
-            <ContainerOne fetchElementRef={fetchElementRef}/>
-            <ContainerTwo bannerTwo={bannerTwo}/>
-            <ContainerThree fetchElementRef={fetchElementRef}/>
-            <ContainerFour faqItems={faqItems} toggleFqContent={toggleFqContent}/>
-            <Faq fetchElementRef={fetchElementRef} faqQuestion={faqQuestion}/>
-            <ContainerFive fetchElementRef={fetchElementRef}/>
+            <Services/>
         </div>
     )
 }
