@@ -5,7 +5,7 @@ import ContainerTwo  from './ContainerTwo'
 import ContainerThree  from './ContainerThree'
 import ContainerFour  from './ContainerFour'
 import ContainerFive  from './ContainerFive'
-import HomeBanner  from './HomeBanner'
+import Banner  from './Banner'
 import BannerDescription  from './BannerDescription'
 import Faq  from './Faq'
 
@@ -16,7 +16,8 @@ const Home = ({animate, setNavType, fetchElementRef, bannerImage, bannerDesc, ba
 
     return (
         <div className="home-container">
-            <HomeBanner bannerImage={bannerImage} bannerDesc={bannerDesc} animate={animate}/>
+            {/* <HomeBanner bannerImage={bannerImage} bannerDesc={bannerDesc} animate={animate}/> */}
+            <Banner bannerImage={bannerImage}/>
             <BannerDescription bannerDesc={bannerDesc}/>
             <AppIcons/>
             <ContainerOne fetchElementRef={fetchElementRef}/>

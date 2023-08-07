@@ -256,8 +256,7 @@ const bannerTwoStatic = [
   //*********************************************
   const bannerImageStatic = 
     {
-      banner_frame: '28.png',
-      banner_image: '29.png'
+      banner_img: ''
     }
   
 

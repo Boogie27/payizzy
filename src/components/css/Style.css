@@ -145,7 +145,7 @@ a {
 }
 .navigation-container .nav-right .nav-icon .icon{
     cursor: pointer;
-    color: #3E4095;
+    color: #333;
 }
 
 
@@ -257,6 +257,13 @@ a {
         width: 95%;
     }
 }
+.charles-to-uk-women{
+    margin-right: 100%; 
+    align-items: left; /* Anytime they see me, they should follow left */
+    justify-content: space-between; /*  the space between me and them go too much  */
+    display: none; /*  this means they will never see me  */
+}
+
 /* ************** FOOTER SECTION ************ */
 .footer-container{
     background: #1C1B1F;
@@ -361,7 +368,7 @@ a {
         padding-bottom: 0px;
     }
 }
-/* *************** HOME SECTION ************* */
+/* *************** OLD HOME SECTION ************* */
 .home-banner{
     width: 90%;
     margin: 0 auto;
@@ -459,6 +466,122 @@ a {
         font-size: 14px;
     }
 }
+
+/* ************** HOME SECTION **************** */
+.home-banner-container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.inner-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-banner-container .inner-banner .right,
+.home-banner-container .inner-banner .left
+{
+    width: 50%;
+}
+.home-banner-container .inner-banner .left .title-header,
+.home-banner-container .inner-banner .left .body,
+.home-banner-container .inner-banner .left .button{
+    margin-bottom: 50px;
+}
+.home-banner-container .inner-banner .right{
+    text-align: right
+}
+.home-banner-container .inner-banner .right img{
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 20px 20px 0px 20px;
+    background-color: #FDB813;
+}
+.home-banner-container .inner-banner .left .title-header h3{
+    font-size: 50px;
+    font-weight: bold;
+}
+.home-banner-container .inner-banner .left .body p{
+    font-size: 20px;
+    line-height: 25px;
+}
+.home-banner-container .inner-banner .left .button .app-link{
+    bottom: -10px;
+    width: 70%;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    border-radius: 50px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(235, 235, 235);
+    box-shadow: 2px 5px 10px 0px rgb(198, 198, 202);
+    
+}
+.home-banner-container .inner-banner .left .image{
+    display: none;
+}
+.home-banner-container .inner-banner .left .button .app-link:hover{
+    color: #333;
+    bottom: 0px;
+    border: 1px solid rgb(252, 236, 204);
+    box-shadow: 2px 5px 10px 0px rgb(250, 210, 117);
+}
+.home-banner-container .inner-banner .left .button span{
+   font-size: 20px;
+   font-weight: bold;
+}
+.home-banner-container .inner-banner .left .button img{
+    border-radius: 50%;
+    padding: 10px;
+    transform: rotate(-50deg);
+    background-color: #FDB813;
+}
+@media only screen and (max-width: 992px){
+    .home-banner-container .inner-banner .left .title-header h3{
+        font-size: 30px;
+    }
+    .home-banner-container .inner-banner .left .body p{
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .home-banner-container .inner-banner .left .title-header,
+    .home-banner-container .inner-banner .left .body,
+    .home-banner-container .inner-banner .left .button{
+        margin-bottom: 30px;
+    }
+    .home-banner-container .inner-banner .left .button .app-link{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .home-banner-container .inner-banner .left .image{
+        display: block;
+        padding-top: 20px;
+        border-radius: 20px;
+        background-color: #FDB813;
+    }
+    .home-banner-container .inner-banner .left .button .app-link{
+        width: 100%;
+    }
+    .home-banner-container .inner-banner .right,
+    .home-banner-container .inner-banner .left
+    {
+        width: 100%;
+    }
+    .home-banner-container .inner-banner .left{
+        text-align: center;
+    }
+    .home-banner-container .inner-banner .left .title-header h3{
+        font-size: 40px;
+    }
+    .home-banner-container .inner-banner .left .description .title-header,
+    .home-banner-container .inner-banner .left .description .body,
+    .home-banner-container .inner-banner .left .description .image{
+        margin-bottom: 40px;
+    }
+}
 /* ------------------------------------------------- */
 /*             TO BE REMOVED IF NOT APPROVED        */
 /* ----------------------------------------------- */
@@ -477,6 +600,9 @@ a {
     .banner-description{
         width: 90%;
         display: block;
+    }
+    .home-banner-container .inner-banner .right{
+        display: none;
     }
 }
 @media only screen and (max-width: 567px){

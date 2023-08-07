@@ -34,7 +34,7 @@ const SideNavHeader = ({sideNavToggle}) => {
     return (
         <div className="side-nav-header">
             <div className="side-nav-img">
-                <img src={logo('4.png')} alt="side-nav"/>
+                <img src={logo('6.jpg')} alt="side-nav"/>
             </div>
             <div className="side-nav-icon">
                 <FontAwesomeIcon  onClick={() => sideNavToggle(false)} className="icon" icon={faBars} /> 

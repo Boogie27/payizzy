@@ -37,7 +37,7 @@ export default Navigation
 const NavigationLeft = () => {
     return (
         <div className="nav-left">
-            <NavLink to="/"><img src={logo('4.png')} alt="nav"/></NavLink>
+            <NavLink to="/"><img src={logo('6.jpg')} alt="nav"/></NavLink>
         </div>
     )
 }
