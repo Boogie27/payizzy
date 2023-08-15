@@ -85,7 +85,7 @@ const Button = () => {
         <div className="button">
             <NavLink to="/" className="app-link">
                 <span>Get the app</span>
-                <img src={app_image('arrow-1.svg')} alt="arrow-right"/>
+                <img src={app_image('arrow-1.svg')}  className="icon" alt="arrow-right"/>
             </NavLink>
         </div>
     )

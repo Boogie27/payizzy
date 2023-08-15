@@ -90,7 +90,7 @@ const LeftService = () => {
             <div className="button">
                 <NavLink to="/" className="app-link">
                     <span>Learn More</span>
-                    <img src={app_image('arrow-2.svg')} alt="arrow-right"/>
+                    <img src={app_image('arrow-2.svg')} className="icon dark" alt="arrow-right"/>
                 </NavLink>
             </div>
         </div>

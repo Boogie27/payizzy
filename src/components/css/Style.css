@@ -615,8 +615,11 @@ a {
 .services-contanier .left .button span{
     color: black;
 }
-.services-contanier .left .button .app-link img{
+.services-contanier .left .button .app-link .icon{
     border-radius: 50%;
+    padding: 10px;
+    transform: rotate(-50deg);
+    background-color: #333;
 }
 .services-contanier .left .button:hover{
     color: #333;
@@ -739,19 +742,22 @@ a {
     }
 }
 /* **************** QRCODES SECTION ********** */
-.qrcodes-contanier{
+.qrcodes-contanier .qrcodes-inner{
     width: 90%;
     display: flex;
     margin: 0 auto;
     margin-top: 50px;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     justify-content: space-between;
 }
 .qrcodes-contanier .qrcodes-left,
 .qrcodes-contanier .qrcodes-right{
     width: 45%;
     height: 100%;
+}
+.qrcodes-contanier .qrcodes-inner.mobile{
+    display: none;
 }
 .qrcodes-contanier .qrcodes-left{
     position: relative;
@@ -797,6 +803,36 @@ a {
     font-weight: 300;
     line-height: 30px;
 }
+.qrcodes-contanier .qrcodes-right .button{
+    margin-top: 30px;
+}
+.qrcodes-contanier .qrcodes-right .button .app-link{
+    bottom: -10px;
+    width: 80%;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    border-radius: 50px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(235, 235, 235);
+    box-shadow: 2px 5px 10px 0px rgb(198, 198, 202);
+}
+.qrcodes-contanier .qrcodes-right .button .app-link:hover{
+    color: #333;
+    bottom: 0px;
+    border: 1px solid rgb(252, 236, 204);
+    box-shadow: 2px 5px 10px 0px rgb(250, 210, 117);
+}
+.qrcodes-contanier .qrcodes-right .button span{
+   font-size: 20px;
+}
+.qrcodes-contanier .qrcodes-right .button .icon{
+    border-radius: 50%;
+    padding: 10px;
+    transform: rotate(-50deg);
+    background-color: #FDB813;
+}
 @media only screen and (max-width: 992px){
     .qrcodes-contanier .qrcodes-left,
     .qrcodes-contanier .qrcodes-right{
@@ -817,15 +853,28 @@ a {
     .qrcodes-contanier .qrcodes-right .image-float h3{
         font-size: 30px;
     }
+    .qrcodes-contanier .qrcodes-right .button .app-link{
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 767px){
-    .qrcodes-contanier{
+    .qrcodes-contanier .qrcodes-inner{
+        display: block;
+    }
+    .qrcodes-contanier .qrcodes-inner.desktop{
+        display: none;
+    }
+    .qrcodes-contanier .qrcodes-inner.mobile{
         display: block;
     }
     .qrcodes-contanier .qrcodes-left,
     .qrcodes-contanier .qrcodes-right{
         width: 100%;
         margin-bottom: 40px;
+    }
+    .qrcodes-contanier .qrcodes-right .button .app-link{
+        width: 70%;
+        margin: 0 auto;
     }
     .qrcodes-contanier .qrcodes-left .image-float{
         padding: 10px;
@@ -850,6 +899,9 @@ a {
     }
     .qrcodes-contanier .qrcodes-right .title-header h3{
         font-size: 35px;
+    }
+    .qrcodes-contanier .qrcodes-right .button .app-link{
+        width: 100%;
     }
 }
 @media only screen and (max-width: 398px){

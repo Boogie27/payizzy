@@ -9,7 +9,8 @@ import { NavLink } from 'react-router-dom'
 import Banner  from './Banner'
 import Services  from './Services'
 import QrCodes  from './QrCodes'
-
+import HowItWorks from './HowItWorks'
+import ContactlessPayment from './ContactlessPayment'
 import Faq  from './Faq'
 
 
@@ -32,6 +33,8 @@ const Home = ({animate, setNavType, fetchElementRef, bannerImage, bannerDesc, ba
             <Banner bannerImage={bannerImage}/>
             <Services/>
             <QrCodes/>
+            <HowItWorks/>
+            <ContactlessPayment/>
         </div>
     )
 }
