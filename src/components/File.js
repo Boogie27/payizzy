@@ -72,9 +72,16 @@ const preloader = (string) => {
 
 
 
+const icons = (string) => {
+    return 'asset/images/icons/' + string
+}
+
+
+
 export {
     url,
     logo,
+    icons,
     help_img,
     user_img,
     blog_img,

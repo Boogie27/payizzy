@@ -1,6 +1,11 @@
 import {  blog_img } from '../File'
 import {  app_image } from '../File'
 import { NavLink } from 'react-router-dom'
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import { icons } from '../File'
+
+
 
 
 
@@ -44,7 +49,29 @@ const Content = () => {
 
 const RightService = () => {
     return (
-        <div className="right">RightService</div>
+        <div className="right">
+            <Row className="show-grid">
+                <Col className="item" xs={6} sm={6} md={6} lg={6} xl={6}><ContentItem title={'Pay with QR Code'} icon={'1.svg'}/></Col>
+                <Col className="item" xs={6} sm={6} md={6} lg={6} xl={6}><ContentItem title={'Credit & Debit Cards'} icon={'2.svg'}/></Col>
+                <Col className="item" xs={6} sm={6} md={6} lg={6} xl={6}><ContentItem title={'Pay with QR Code'} icon={'3.svg'}/></Col>
+                <Col className="item" xs={6} sm={6} md={6} lg={6} xl={6}><ContentItem title={'Pay with QR Code'} icon={'4.svg'}/></Col>
+            </Row>
+        </div>
+    )
+}
+
+
+
+const ContentItem = ({title, icon}) => {
+    return (
+        <div className="content-item">
+            <div className="image">
+                <img src={icons(icon)} className="icons-bg" alt="icons-1"/>
+            </div>
+            <div className="title-header">
+                <h3>{title}</h3>
+            </div>
+        </div>
     )
 }
 

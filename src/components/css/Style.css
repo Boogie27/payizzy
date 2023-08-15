@@ -457,6 +457,7 @@ a {
 .home-banner-container .inner-banner .left .body p{
     font-size: 20px;
     line-height: 30px;
+    font-weight: 300;
 }
 .home-banner-container .inner-banner .left .button .app-link{
     bottom: -10px;
@@ -513,6 +514,9 @@ a {
         padding-top: 20px;
         border-radius: 10px;
         background-color: #FDB813;
+    }
+    .home-banner-container .inner-banner .right{
+        display: none;
     }
     .home-banner-container .inner-banner .left .button .app-link{
         width: 100%;
@@ -573,7 +577,7 @@ a {
 }
 .services-contanier .right,
 .services-contanier .left{
-    width: 50%;
+    width: 45%;
 }
 .services-contanier .left .title-header,
 .services-contanier .left .body,
@@ -581,11 +585,12 @@ a {
     margin-bottom: 30px;
 }
 .services-contanier .left .title-header h3{
-    font-size: 50px;
+    font-size: 45px;
 }
 .services-contanier .left .body p{
     font-size: 20px;
     line-height: 25px;
+    font-weight: 300;
 }
 .services-contanier .left .button{
     width: 50%;
@@ -595,7 +600,7 @@ a {
     border-radius: 50px;
     transition: all 0.3s ease;
     background-color:  #FDB813;
-    border: 1px solid transparent;
+    border: 2px solid#FDB813;
 }
 .services-contanier .left .button .app-link{
     display: flex;
@@ -617,52 +622,239 @@ a {
     color: #333;
     bottom: 0px;
     width: 60%;
+    background-color:  rgb(255, 199, 70);
+    
 }
-/* ------------------------------------------------- */
-/*             TO BE REMOVED IF NOT APPROVED        */
-/* ----------------------------------------------- */
-@media only screen and (max-width: 767px){
-    .home-banner .banner-content .left-side{
-        display: none;
+.services-contanier .right .item{
+    margin-bottom: 30px;
+}
+.services-contanier .right .content-item{
+    width: 100%;
+    height: 240px;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.services-contanier .right .content-item .image{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    background-color: #FDB813;
+    background-image: linear-gradient(to bottom right, #FDB813, #D2AB4B);
+}
+.services-contanier .right .content-item .image img{
+    width: 25px;
+    height: 25px;
+}
+.services-contanier .right .content-item h3{
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+}
+@media only screen and (max-width: 1125px){
+    .services-contanier .right .content-item h3{
+        font-size: 22px;
     }
-    .home-banner .banner-content .right-side{
-        width: 100%;
+    .services-contanier .right .content-item{
+        height: 220px;
     }
-    .home-banner .banner-content .right-side img{
-        top: 0px;
+    .services-contanier .right,
+    .services-contanier .left{
+        width: 50%;
+    }
+    .services-contanier .left .button{
         width: 70%;
-        height: 100%;
     }
-    .banner-description{
-        width: 90%;
+}
+@media only screen and (max-width: 992px){
+    .services-contanier .right .content-item h3{
+        font-size: 20px;
+    }
+    .services-contanier .right .content-item{
+        height: 170px;
+    }
+    .services-contanier .right .content-item .image{
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .services-contanier .inner-services{
+        padding: 30px;
+    }
+    .services-contanier .left .title-header h3{
+        font-size: 30px;
+    }
+    .services-contanier .left .button{
+        width: 80%;
+    }
+    .services-contanier .left .button:hover{
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .services-contanier .inner-services{
         display: block;
+        padding: 40px 20px;
     }
-    .home-banner-container .inner-banner .right{
-        display: none;
+    .services-contanier .right,
+    .services-contanier .left{
+        width: 100%;
+        text-align: center;
+    }
+    .services-contanier .left{
+        margin-bottom: 50px;
+    }
+    .services-contanier .left .title-header h3{
+        font-size: 35px;
+        text-align: center;
+    }
+    .services-contanier .left .button{
+        width: 80%;
+        margin: 0 auto;
     }
 }
 @media only screen and (max-width: 567px){
-    .home-banner .banner-content .right-side{
-        height: 150%;
+    .services-contanier .left .button{
+        width: 90%;
     }
-    .home-banner .banner-content .right-side img{
+    .services-contanier .left .button:hover{
+        width: 85%;
+    }
+    .services-contanier .right .content-item h3{
+        font-size: 18px;
+    }
+    .services-contanier .right .content-item{
         width: 100%;
-        height: 100%;
-    }
-    .banner-description .item h3{
-        font-size: 30px;
-    }
-    .banner-description .item p{
-        font-size: 15px;
+        height: 150px;
     }
 }
 @media only screen and (max-width: 398px){
-    .banner-description .item h3{
-        font-size: 25px;
-    } 
+    .services-contanier .left .title-header h3{
+        font-size: 30px;
+    }
 }
-/* ---------------------------------------------- */
+/* **************** QRCODES SECTION ********** */
+.qrcodes-contanier{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+.qrcodes-contanier .qrcodes-left,
+.qrcodes-contanier .qrcodes-right{
+    width: 45%;
+    height: 100%;
+}
+.qrcodes-contanier .qrcodes-left{
+    position: relative;
+}
+.qrcodes-contanier .qrcodes-left .image{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+.qrcodes-contanier .qrcodes-left .image img{
+    width: 100%;
+    height: 100%;
+}
+.qrcodes-contanier .qrcodes-left .image-float{
+    left: 00px;
+    bottom: 20px;
+    padding: 20px;
+    position: absolute;
+}
+.qrcodes-contanier .qrcodes-left .qrcodes-left-inner{
+    padding: 20px;
+    width: 70%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.qrcodes-contanier .qrcodes-left .image-float img{
+    width: 100px;
+}
+.qrcodes-contanier .qrcodes-left .image-float p{
+    font-size: 14px;
+    line-height: 20px;
+}
+.qrcodes-contanier .qrcodes-right .title-header{
+    margin: 20px 0px;
+}
+.qrcodes-contanier .qrcodes-right .title-header h3{
+    font-weight: bold;
+    font-size: 40px;
+}
+.qrcodes-contanier .qrcodes-right .body{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+}
+@media only screen and (max-width: 992px){
+    .qrcodes-contanier .qrcodes-left,
+    .qrcodes-contanier .qrcodes-right{
+        width: 47%;
+    }
+    .qrcodes-contanier .qrcodes-left .image-float{
+        bottom: 0;
+    }
+    .qrcodes-contanier .qrcodes-left .image-float h3{
+        font-size: 20px;
+    }
+    .qrcodes-contanier .qrcodes-left .image-float img{
+        width: 80px;
+    }
+    .qrcodes-contanier .qrcodes-left .qrcodes-left-inner{
+        width: 100%;
+    }
+    .qrcodes-contanier .qrcodes-right .image-float h3{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .qrcodes-contanier{
+        display: block;
+    }
+    .qrcodes-contanier .qrcodes-left,
+    .qrcodes-contanier .qrcodes-right{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .qrcodes-contanier .qrcodes-left .image-float{
+        padding: 10px;
+    }
+    .qrcodes-contanier .qrcodes-left .image-float img{
+        width: 50%;
+    }
+    .qrcodes-contanier .qrcodes-left .qrcodes-left-inner{
+        width: 70%;
+    }
+    .qrcodes-contanier .qrcodes-right{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 567px){
+    .qrcodes-contanier .qrcodes-left .qrcodes-left-inner{
+        width: 100%;
+        padding: 10px;
+    }
+    .qrcodes-contanier .qrcodes-left .image-float img{
+        width: 70px;
+    }
+    .qrcodes-contanier .qrcodes-right .title-header h3{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 398px){
 
+}
 /* ************* APP ICON SECTION *********** */
 .app-icon-container{
     width: 100%;
