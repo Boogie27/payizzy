@@ -18,9 +18,9 @@ const OurServices = () => {
             </div>
             <div className="body">
                 <Row className="show-grid">
-                    <Col className="item" xs={12} sm={6} md={4} lg={4} xl={4}><ContentItem link={''} title={'Pay with QR Code'} image={'our-services-1.png'}/></Col>
-                    <Col className="item" xs={12} sm={6} md={4} lg={4} xl={4}><ContentItem link={''} title={'Pay with QR Code'} image={'our-services-2.png'}/></Col>
-                    <Col className="item" xs={12} sm={6} md={4} lg={4} xl={4}><ContentItem link={''} title={'Pay with QR Code'} image={'our-services-3.png'}/></Col>
+                    <Col className="item" xs={12} sm={6} md={6} lg={4} xl={4}><ContentItem link={''} title={'Pay with QR Code'} image={'our-services-1.png'}/></Col>
+                    <Col className="item" xs={12} sm={6} md={6} lg={4} xl={4}><ContentItem link={''} title={'Pay with QR Code'} image={'our-services-2.png'}/></Col>
+                    <Col className="item" xs={12} sm={6} md={6} lg={4} xl={4}><ContentItem link={''} title={'Pay with QR Code'} image={'our-services-3.png'}/></Col>
                 </Row>
             </div>
         </div>
