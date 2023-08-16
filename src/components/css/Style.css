@@ -32,16 +32,27 @@ body{
     font-size: 32px;
     line-height: 39px;
     letter-spacing: 0.005em;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 ul, ol {
     margin-bottom: 0;
     list-style: none;
     padding: 0px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   }
 a {
     color: #333;
     text-decoration: none;
     background-color: transparent;
+}
+p, li, h3{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 /* ***************PRELOADER******************************* */
 .preloader{
@@ -264,7 +275,7 @@ a {
     font-size: 16px;
 }
 .footer-bottom .footer-left span.at span{
-    color: #3E4095;
+    color: #FDB813;
 }
 .footer-right ul li{
     margin: 0px 15px;
@@ -1025,6 +1036,63 @@ a {
     .ourServices-container .content-item:hover{
         transform: scale(1.05);
     }
+}
+/* ************* HOME REVIEWS SECTION ************ */
+.home-reviews-container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: #D8E3E2;
+}
+.home-reviews-container .home-reviews-inner{
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0px;
+}
+.home-reviews-container .home-reviews-inner .title-header h3{
+    font-size: 45px;
+    font-weight: bold;
+}
+.home-reviews-inner .slider-frame{
+    margin-top: 50px;
+}
+.home-reviews-inner .slide-item{
+    background-color: #fff;
+    margin: 0px 10px;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+.home-reviews-inner .slide-item .title-header h3{
+    font-size: 30px;
+}
+.home-reviews-inner .slide-item .body p{
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.home-reviews-inner .slide-item .user-profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.home-reviews-inner .slide-item .user-profile .image{
+    width: 20%;
+}
+.home-reviews-inner .slide-item .user-profile .image img{
+    border-radius: 50%;
+}
+.home-reviews-inner .slide-item .user-profile .detail ul li{
+    font-size: 13px;
+    line-height: 20px;
+}
+.home-reviews-inner .slide-item .user-profile .detail ul li.name{
+    font-weight: bold;
+}
+.home-reviews-inner .slide-item .user-profile .detail ul li.location{
+    color: #555;
 }
 /* ************* APP ICON SECTION *********** */
 .app-icon-container{

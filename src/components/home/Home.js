@@ -12,6 +12,7 @@ import QrCodes  from './QrCodes'
 import HowItWorks from './HowItWorks'
 import ContactlessPayment from './ContactlessPayment'
 import Faq  from './Faq'
+import Reviews  from './Reviews'
 import OurServices from './OurServices'
 
 
@@ -36,6 +37,7 @@ const Home = ({animate, setNavType, fetchElementRef, bannerImage, bannerDesc, ba
             <HowItWorks/>
             <ContactlessPayment/>
             <OurServices/>
+            <Reviews/>
         </div>
     )
 }
