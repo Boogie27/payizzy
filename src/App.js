@@ -73,11 +73,11 @@ function App() {
   }
 
   const scrollToSection = (element) => {
-    window.scrollTo({
-        top: element.current.offsetTop - 100,
-        behavior: 'smooth'
-    })
-    sideNavToggle(false)
+    // window.scrollTo({
+    //     top: element.current.offsetTop - 100,
+    //     behavior: 'smooth'
+    // })
+    // sideNavToggle(false)
   }
 
   // page scroll effect

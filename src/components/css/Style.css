@@ -130,7 +130,7 @@ p, li, h3{
     z-index: 15;
     width: 100%;
     position: fixed;
-    box-shadow: 2px 2px 4px 0px rgb(202, 202, 255);
+    box-shadow: 2px 2px 4px 0px rgb(211, 211, 211);
 }
 @media only screen and (max-width: 992px){
     .navigation-container .nav-right .nav-icon{
