@@ -15,7 +15,7 @@ import HowTo from './HowTo'
 const Blog = ({featuredPost}) => {
     return (
         <div className="blog-container">
-            <TitleHeader/>
+            {/* <TitleHeader/> */}
             <BlogBanner/>
             <FeaturedPost featuredPost={featuredPost}/>
             <TrendingBlog/>

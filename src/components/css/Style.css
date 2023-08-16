@@ -1716,147 +1716,125 @@ p, li, h3{
 }
 
 /* ***************** BLOG SECTION ************* */
-.blog-container  .main-title-header {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 50px;
+.blog-banner {
+    margin: 100px 0px;
 }
-.blog-container  .main-title-header h3{
-    font-size: 38px;
+.blog-banner .blog-banner-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.blog-banner .left-side,
+.blog-banner .right-side{
+    width: 47%;
+}
+.blog-banner .left-side{
+    padding-left: 70px;
+}
+.blog-banner .left-side .title-header h3{
+    font-size: 40px;
     font-weight: bold;
-    text-align: center;
+    margin: 0px;
+    margin-bottom: 25px;
+    line-height: 35px;
 }
-.blog-container  .blog-banner{
-    width: 90%;
-    margin: 0 auto;
-    height: 400px;
-    overflow: hidden;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 20px;
+.blog-banner .left-side .body{
+    margin-bottom: 30px;
+}
+.blog-banner .left-side .body p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.blog-banner .right-side img{
+    top: -8px;
+    width: 300px;
+    height: 300px;
     position: relative;
-    background-color: #9DD7C9;
 }
-.blog-container  .blog-banner img.banner-bg{
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-}
-.blog-container  .blog-banner .banner-content{
-    top: 0px;
-    left: 0px;
-    width: 100%;
+.blog-banner .right-side .banner-img{
     height: 400px;
     display: flex;
     align-items: center;
-    position: absolute;
+    justify-content: center;
+    background-color: #FDB813;
+    border-radius: 200px 0px 0px 200px;
+}
+.blog-banner .left-side .button{
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 35px;
+    transition: all 0.3s ease;
+    background-color: #FDB813;
+    border: 2px solid transparent;
+}
+.blog-banner .left-side .button:hover{
+    background-color: rgb(250, 202, 90);
+    border: 2px solid #FDB813;
+}
+.blog-banner .left-side .button .app-link{
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
-.blog-container  .blog-banner .banner-content{
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    position: absolute;
+.blog-banner .left-side .button .app-link:hover{
+    color: #333;
 }
-.blog-banner .banner-content .left-side .title-header{
-    width: 100%;
-}
-.blog-banner .banner-content .left-side .title-header h3{
-    font-size: 50px;
+.blog-banner .left-side .button .app-link span{
+    font-size: 18px;
     font-weight: bold;
 }
-.blog-banner .banner-content .right-side img{
-    width: 400px;
+.blog-banner .left-side .button .app-link .icon{
+    border-radius: 50%;
+    padding: 12px;
+    transform: rotate(-50deg);
+    background-color: #333;
+}
+@media only screen and (max-width: 1125px){
+    .blog-banner .right-side .banner-img{
+        height: 350px;
+    }
+    .blog-banner .right-side img{
+        width: 250px;
+        height: 250px;
+    }
 }
 @media only screen and (max-width: 992px){
-    .blog-container  .main-title-header {
-        width: 80%;
+    .blog-banner .right-side img{
+        width: 200px;
+        height: 200px;
     }
-    .blog-banner .banner-content .right-side img{
-        width: 100%;
-    }
-    .blog-container  .blog-banner{
-        width: 95%;
-        height: 400px;
-    }
-    .blog-banner .banner-content .left-side .title-header{
+    .blog-banner .left-side .button{
         width: 100%;
     }
 }
 @media only screen and (max-width: 767px){
-    .blog-container .blog-banner{
-        height: 300px;
+    .blog-banner .right-side{
+        display: none;
     }
-    .blog-container  .main-title-header {
-        width: 90%;
+    .blog-banner .left-side{
+        width: 100%;
+        padding: 0px;
+        text-align: center;
     }
-    .blog-banner .banner-content .left-side{
-        left: 10px;
-        width: 50%;
-        position: relative;
+    .blog-banner {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
-    .blog-banner .banner-content .right-side img{
-        width: 250px;
+    .blog-banner .left-side .button{
+        width: 70%;
+        margin: 0 auto;
     }
-    .blog-banner .banner-content .left-side .title-header h3{
-        font-size: 30px;
+    .blog-banner .left-side .title-header h3{
+        font-size: 35px;
     }
 }
 @media only screen and (max-width: 567px){
-    .blog-container .blog-banner{
-        height: 370px;
+    .blog-banner .left-side .button{
         width: 100%;
-        border-radius: 0px;
-    }
-    .blog-banner .banner-content .left-side{
-        left: 10px;
-        width: 50%;
-        height: 100%;
-        position: relative;
-    }
-    .blog-container  .main-title-header {
-        width: 100%;
-        padding: 0px 10px;
-    }
-    .blog-container  .main-title-header h3{
-        font-size: 33px;
-        color: rgb(105, 105, 105);
-    }
-    .blog-banner .banner-content .right-side{
-        width: 100%;
-    }
-    .blog-banner .banner-content .right-side img{
-        width: 80%;
-        height: 100%;
-        opacity: 0.5;
-    }
-    .blog-banner .banner-content .left-side{
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        z-index: 10;
-        display: flex;
-        padding: 10px;
-        align-items: center;
-        position: absolute;
-    }
-    .blog-banner .banner-content .left-side .title-header h3{
-        text-align: center;
-        font-size: 33px;
-    }
-}
-@media only screen and (max-width: 398px){
-    .blog-container .blog-banner{
-        height: 340px;
-    }
-    .blog-banner .banner-content .right-side img{
-        width: 100%;
-    }
-    .blog-container  .main-title-header h3{
-        font-size: 25px;
-    }
-    .blog-banner .banner-content .left-side .title-header h3{
-        font-size: 30px;
     }
 }
 /* ***************** FETAURED POST SECTION ************* */
@@ -1902,7 +1880,7 @@ p, li, h3{
     width: 180px;
 }
 .featured-post .featured-item .top-item .left-side .title-header h3{
-    color: #9DD7C9;
+    color: #FDB813;
     font-size: 22px;
 }
 .featured-post .featured-item .top-item .left-side .body p{
@@ -2052,7 +2030,7 @@ p, li, h3{
 .trending-blog-body .left-side .float-content  .top .title-header h3,
 .trending-blog-body .right-side .float-content  .top .title-header h3{
     margin: 0px;
-    color: #9DD7C9;
+    color: #FDB813;
     font-size: 22px;
 }
 .trending-blog-body .left-side .float-content .top .text p,
@@ -2212,7 +2190,7 @@ p, li, h3{
     height: 300px;
     border-radius: 5px;
     position: relative;
-    background: #9DD7C9;
+    background: #FDB813;
     box-shadow: 0px 0px 0px 0.548667px rgba(51, 51, 51, 0.25);
 }
 .how-to-container .howto-content .left-side{
@@ -2242,7 +2220,7 @@ p, li, h3{
     margin-bottom: 20px;
 }
 .howto-content .right-side .right-howto-top .title-header h3{
-    color: #9DD7C9;
+    color: #FDB813;
     font-size: 30px;
 }
 .howto-content .right-side .right-howto-top p{
