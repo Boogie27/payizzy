@@ -2326,18 +2326,23 @@ p, li, h3{
     margin: 0 auto;
     padding: 70px 0px 150px 0px;
 }
+.contact-us-body .show-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .contact-us-body .left-side .title-header h3{
     width: 100%;
     font-size: 30px;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
 }
 .contact-us-body .left-side .image{
-    width: 100%;
-    text-align: right;
+    width: 90%;
+    text-align: center;
 }
 .contact-us-body .left-side .image img{
-    width: 450px;
+    width: 100%;
 }
 .contact-us-body .right-side .form{
     padding-left: 20px;
