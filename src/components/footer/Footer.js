@@ -1,6 +1,6 @@
 
 import { NavLink } from 'react-router-dom'
-import {  app_image } from '../File'
+import {  app_image, logo } from '../File'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
     faFacebookF,
@@ -65,7 +65,7 @@ const FooterBottom = () => {
             <div className="inner-content">
                 <div className="footer-left">
                     <NavLink to="/">
-                        <img src={app_image('17.jpg')} alt="nav"/>
+                        <img src={logo('logo-4.png')} alt="nav"/>
                     </NavLink>
                     <span className="at"><span>(C)</span> Copyright Payizzy 2022. All right reserved</span>
                 </div>
