@@ -4,7 +4,7 @@
 /* *********************************** */
 /* 
     color: #C3C4DE;
-    background-color: #3E4095;
+    background-color: #FDB813;
 */
 /* @font-face {
     font-family: 'Clash';
@@ -196,7 +196,7 @@ p, li, h3{
 }
 .side-nav-header .side-nav-icon .icon{
     cursor: pointer;
-    color: #3E4095;
+    color: #FDB813;
 }
 .side-nav-links{
     padding: 20px;
@@ -208,7 +208,7 @@ p, li, h3{
     font-size: 20px;
 }
 .side-nav-links ul li a:hover{
-    color: #3E4095;
+    color: #FDB813;
 }
 @media only screen and (max-width: 567px){
     .side-navigation .side-nav-container{
@@ -325,7 +325,7 @@ p, li, h3{
         font-size: 14px;
     }
     .footer-bottom-at span.at span{
-        color: #3E4095;
+        color: #FDB813;
     }
     .footer-bottom{
         padding-bottom: 0px;
@@ -1485,8 +1485,8 @@ p, li, h3{
 }
 .content-four-slider .frame-item .item:hover{
     color: #fff;
-    border: 1px solid #3E4095;
-    background-color: #3E4095;
+    border: 1px solid #FDB813;
+    background-color: #FDB813;
 }
 .content-four-slider .frame-item a{
     color: #333;
@@ -1544,7 +1544,7 @@ p, li, h3{
     padding: 0px 50px;
     align-items: center;
     border-radius: 20px 0px 0px 20px;
-    background-color:#3E4095;
+    background-color:#FDB813;
 }
 .container-five-container .right-side{ 
     overflow: hidden;
@@ -1668,7 +1668,7 @@ p, li, h3{
 .faq-container .left-side .faq-item li .item-title.active,
 .faq-container .left-side .faq-item li .item-title:hover{
     color: #fff;
-    background-color: #3E4095;
+    background-color: #FDB813;
 }
 .faq-container .left-side .faq-item li .item-title span{
     line-height: 25px;
@@ -2314,7 +2314,7 @@ p, li, h3{
 /* ************** CONTACT US SECTION ************* */
 .contact-us-container .main-title-header{
     padding: 100px 0px;
-    background-color: #3E4095;
+    background-color: #FDB813;
 }
 .contact-us-container .main-title-header .title-header h3{
     color: #fff;
@@ -2363,23 +2363,23 @@ p, li, h3{
     outline: none;
     box-shadow: none;
     border-radius: 4px;
-    border: 1px solid #3E4095;
+    border: 1px solid #FDB813;
 }
 .contact-us-body .right-side .form .button{
   margin: 30px 0px;
 }
 .contact-us-body .right-side .form button{
     border: none;
-    color: #fff;
+    color: #333;
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
     padding: 5px 30px; 
-    background-color: #3E4095;
+    background-color: #FDB813;
     transition: background-color 0.4s ease;
 }
 .contact-us-body .right-side .form button:hover{
-    background-color: #6566AA;
+    background-color: #FDB813;
 }
 @media only screen and (max-width: 992px){
     .contact-us-body .left-side .image img{
@@ -2448,64 +2448,55 @@ p, li, h3{
     }
 }
 /* *************PAGE BOTTOM HELP SECTION ******************** */
-.page-bottom-help .need-help{
-    background-color: #3E4095;
+.page-bottom-help .button{
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background-color: #FDB813;
+}
+.page-bottom-help .button .app-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page-bottom-help .button .app-link span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.page-bottom-help .button .app-link:hover{
+    color:#333;
+}
+.page-bottom-help .button:hover{
+    border: 2px solid #FDB813;
+    background-color: #fff;
+}
+.page-bottom-help .button .app-link .icon{
+    padding: 10px;
+    border-radius: 50%;
+    transform: rotate(-50deg);
+    background-color: #333;
+}
+/* ************* HELP SECTION ******************** */
+.page-bottom-help{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
 }
 .page-bottom-help .need-help{
     width: 100%;
-    margin: 0 auto;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.page-bottom-help .need-help p{
-    margin: 0px;
-    color: #fff;
-    font-size: 18px;
-}
-.page-bottom-help .need-help .right-side a{
-    margin: 0px 20px;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 40px;
-    border-radius: 5px;
-    background-color: #fff;
-}
-.page-bottom-help .need-help .right-side a:hover{
-    color: #333;
-}
-.page-bottom-help .need-help .right-side img{
-    width: 20px;
-    right: -10px;
-    position: relative;
-}
-@media only screen and (max-width: 767px){
-    .page-bottom-help .need-help .right-side a{
-        font-size: 15px;
-        padding: 10px 30px;
-    }
-    .page-bottom-help .need-help p{
-        font-size: 15px;
-    }
-}
-@media only screen and (max-width: 567px){
-    .page-bottom-help .need-help{
-        display: block;
-        height: inherit;
-        padding: 60px 0px;
-        margin-top: 100px;
-        text-align: center;
-    }
-}
-/* ************* HELP SECTION ******************** */
-.help-container{
-
+    padding: 100px 0px 100px 50px;
+    background-size: cover;
+    border-radius: 20px;
+    background-color: #D8E3E2;
+    background-repeat: no-repeat;
 }
 .helper.main-title-header{
     text-align: center;
     padding: 50px 0px;
-    background-color: #3E4095;
+    background-color: #FDB813;
 }
 .helper.main-title-header .title-header{
     width: 50%;
@@ -2515,40 +2506,10 @@ p, li, h3{
     color: #fff;
     font-size: 40px;
 }
-.helper.main-title-header .form{
-    margin-top: 20px;
-}
-.helper.main-title-header .form .form-item{
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    border-radius: 5px;
-}
-.helper.main-title-header .form input{
-    width: 80%;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 5px 10px;    
-    border-radius: 7px 0px 0px 7px;
-}
-.helper.main-title-header .form input:focus,
-.helper.main-title-header .form button:focus{
-    outline: none;
-    box-shadow: none;
-}
-.helper.main-title-header .form button:focus{
-    border: none;
-}
-.helper.main-title-header .form button{
-    width: 20%;
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    font-size: 20px;
-    padding: 5px 0px;
-    background-color: #6566AA;
-    border-radius: 0px 7px 7px 0px;
+.page-bottom-help .need-help .title-header h3{
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 35px;
 }
 .help-container .help-body-container{
     width: 90%;
@@ -2569,7 +2530,7 @@ p, li, h3{
 }
 .help-container .help-body-container .help-content:hover{
     transform: scale(1.05);
-    box-shadow: 0px 6px 10px 0px #6566AA;
+    box-shadow: 0px 6px 10px 0px #FDB813;
 }
 .help-container .help-body-container .help-content .title{
     left: 0px;
@@ -2603,12 +2564,63 @@ p, li, h3{
     width: 20px;
     height: 20px;
  }
+ .input-form-container{
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 4px 5px 3px rgb(218, 218, 218);
+ }
+ .input-form-container .input{
+        width: 80%;
+        border: none;
+        color: #555;
+        font-size: 15px;
+        padding: 10px 20px;
+        font-weight: 500;
+        
+        background-color: transparent;
+ }
+.input-form-container button{
+    right: 10px;
+    border: none;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: transparent;
+}
+.input-form-container button .icon{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    transform: rotate(-50deg);
+}
+.input-form-container .input:focus{
+    border: none;
+    outline: none;
+}
  @media only screen and (max-width: 1125px){
     .help-container .help-body-container .help-content{
         height: 200px;
     }
  }
+@media only screen and (max-width: 992px){
+    .page-bottom-help{
+        width: 100%;
+        margin: 0px;
+        margin-top: 100px;
+    }
+    .page-bottom-help .need-help{
+        border-radius: 0px;
+    }
+}
 @media only screen and (max-width: 767px){
+    .input-form-container{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
     .helper.main-title-header .form input{
         width: 70%;
     }
@@ -2622,8 +2634,25 @@ p, li, h3{
         width: 100%;
         padding: 0px 20px;
     }
+    .page-bottom-help .need-help{
+        text-align: center;
+        padding: 100px 10px 100px 10px;
+    }
+    .page-bottom-help .need-help .button{
+        margin: 0 auto;
+        margin-top: 40px;
+    }
 }
 @media only screen and (max-width: 567px){
+    .input-form-container{
+        width: 100%;
+    }
+    .page-bottom-help .need-help .button{
+        width: 100%;
+    }
+    .page-bottom-help .need-help .title-header h3{
+        font-size: 30px;
+    }
     .helper.main-title-header .title-header h3{
         font-size: 32px;
         padding: 0px 10px;
@@ -2643,6 +2672,9 @@ p, li, h3{
     }
 }
 @media only screen and (max-width: 398px){
+    .page-bottom-help .need-help .title-header h3{
+        font-size: 25px;
+    }
     .helper.main-title-header .title-header h3{
         font-size: 25px;
     }
@@ -2701,7 +2733,7 @@ p, li, h3{
     text-decoration: underline;
 }
 .help-content-container .support a:hover{
-    color: #6566AA;
+    color: #FDB813;
 }
 .help-content-container .like-container{
     width: 90%;
@@ -2721,7 +2753,7 @@ p, li, h3{
     transition: all 0.3s ease;
 }
 .help-content-container .like-container .icon:hover{
-    color: #6566AA;
+    color: #FDB813;
     transform: scale(1.20);
 }
 .help-content-container .helpful-btn{
@@ -2734,25 +2766,26 @@ p, li, h3{
     display: inline-block;
 }
 .help-content-container .helpful-btn ul li button{
-    color: #333;
+    color: #FDB813;
+    font-weight: 300;
     font-weight: 600;
     padding: 3px 40px;
     margin: 0px 10px;
     border-radius: 5px;
-    border: 2px solid #ccc;
-    background-color: #ccc;
+    border: 2px solid #333;
+    background-color: #333;
     transition: all 0.3s ease;
 }
 .help-content-container .helpful-btn ul li button.active{
-    color: #fff;
+    color: #333;
     margin-left: 50px;
-    border: 2px solid #6566AA;
-    background-color: #6566AA;
+    border: 2px solid #FDB813;
+    background-color: #FDB813;
 }
 .help-content-container .helpful-btn ul li button:hover,
 .help-content-container .helpful-btn ul li button.active:hover{
-    color: #6566AA;
-    border: 2px solid #6566AA;
+    color: #FDB813;
+    border: 2px solid #FDB813;
     background-color: transparent;
 }
 .help-content-container .help-featured-post{
@@ -2774,7 +2807,7 @@ p, li, h3{
     padding: 20px 0px;
     line-height: 25px;
     position: relative;
-    transition: all 0.3s ease;
+    transition: top 0.3s ease;
     background-color: #fff;
     border-bottom: 1px solid #ccc;
 }
@@ -2783,7 +2816,7 @@ p, li, h3{
     padding: 20px 10px;
     border-radius: 10px;
     border-bottom: 1px solid transparent;
-    box-shadow: 4px 6px 10px 4px rgba(51, 51, 51, 0.25);
+    box-shadow: 2px 6px 7px 4px rgba(51, 51, 51, 0.25);
 }
 .help-fetaured-post-body ul li .icon{
     font-size: 22px;
@@ -2832,9 +2865,10 @@ p, li, h3{
     .help-fetaured-post-body ul li{
         border: none;
         border-radius: 5px;
-        margin: 10px 0px;
+        margin: 30px 0px;
         padding: 20px 10px;
-        box-shadow: 4px 6px 10px 4px rgba(51, 51, 51, 0.25);
+        border: 1px solid rgb(245, 245, 245);
+        box-shadow: 0px 5px 3px 0px rgba(51, 51, 51, 0.25);
     }
     .help-fetaured-post-body ul li:hover{
         top: 0px;
@@ -2852,6 +2886,7 @@ p, li, h3{
     }
     .help-content-container .help-content-body .title-header h3{
         font-size: 30px;
+        text-align: center;
     }
     .help-content-container .help-content-body .body{
         font-size: 14px;

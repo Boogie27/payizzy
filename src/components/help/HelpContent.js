@@ -7,7 +7,7 @@ import {
     faThumbsUp,
     faThumbsDown
 } from '@fortawesome/free-solid-svg-icons'
-
+import HelpBanner from './HelpBanner'
 
 
 
@@ -17,7 +17,7 @@ const HelpContent = () => {
     
     return (
         <div className="help-content-container">
-            <TitleHeader/>
+            <HelpBanner/>
             <HelpContentBody/>
             <Support/>
             <Likes/>

@@ -50,7 +50,7 @@ const NavigationRight = ({sections, scrollToSection, sideNavToggle}) => {
         <div className="nav-right main">
             <ul className="nav-links">
                 <li onClick={() => scrollToSection(sections.whoWeAre)}><NavLink to="/">Who we are</NavLink></li>
-                <li onClick={() => scrollToSection(sections.integrations)}><NavLink to="/">Integrations</NavLink></li>
+                <li><NavLink to="/contact-us">Contact us</NavLink></li>
                 <li><NavLink to="/blog">Blog</NavLink></li>
                 <li><NavLink to="/help">Help</NavLink></li>
             </ul>

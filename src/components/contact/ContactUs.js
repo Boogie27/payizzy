@@ -1,8 +1,9 @@
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import {  contact_img } from '../File'
 import BottomHelp from '../help/BottomHelp'
-
+import RightSide from './RightSide'
+import LeftSide from './LeftSide'
+import ContactBanner from './ContactBanner'
 
 
 
@@ -11,7 +12,7 @@ const ContactUs = ({setNavType}) => {
 
     return (
         <div className="contact-us-container">
-            <TitleHeader/>
+            <ContactBanner/>
             <ContactUsBody/>
             <BottomHelp/>
         </div>
@@ -22,16 +23,6 @@ const ContactUs = ({setNavType}) => {
 export default ContactUs
 
 
-
-const TitleHeader = () => {
-    return (
-        <div className="main-title-header">
-           <div className="title-header">
-                <h3>Contact us</h3>
-           </div>
-        </div>
-    )
-}
 
 
 
@@ -52,49 +43,12 @@ const ContactUsBody = () => {
 
 
 
-const LeftSide = () => {
-    return (
-        <div className="left-side">
-            <div className="title-header">
-                <h3>Let’s Start the Conversation</h3>
-            </div>
-            <div className="image">
-                <img src={contact_img('1.jpg')} alt="contact-1"/>
-            </div>
-        </div>
-    )
-}
 
 
 
 
-const RightSide = () => {
-    return (
-        <div className="right-side">
-            <div className="form">
-                <div className="form-group">
-                    <label htmlFor="">Name</label>
-                    <input type="text" className="form-control error" placeholder="Type Name"/>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="">Phone</label>
-                    <input type="text" className="form-control" placeholder="Type Phone Number"/>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="">Email</label>
-                    <input type="text" className="form-control" placeholder="Type Email Address"/>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="">How Can We Help You?</label>
-                    <textarea rows={4} cols={40}  className="form-control" placeholder="Type Description"></textarea>
-                </div>
-                <div className="form-group  button">
-                    <button type="button">Send Message</button>
-                </div>
-            </div>
-        </div>
-    )
-}
+
+
 
 
 

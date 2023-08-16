@@ -1,22 +1,21 @@
 
 import { NavLink } from 'react-router-dom'
-import {  contact_img } from '../File'
+import {  contact_img, app_image, blog_img } from '../File'
 
 
 
 const BottomHelp = () =>{
     return (
         <div className="page-bottom-help">
-            <div className="need-help">
-                <div className="left-side">
-                    <p>Need help? We're always here for you.</p>
+            <div style={{ backgroundImage: `url("${blog_img('1.png')}")`}} className="need-help">
+                <div className="title-header">
+                    <h3>
+                        Open your account today <br/>
+                        and experience the next <br/>
+                        gen banking
+                    </h3>
                 </div>
-                <div className="right-side">
-                    <NavLink to="/">
-                        Chat with us live
-                        <img src={contact_img('2.svg')} alt="need-help"/>
-                    </NavLink>
-                </div>
+                <Button/>
             </div>
         </div>
     )
@@ -25,3 +24,19 @@ const BottomHelp = () =>{
 
 
 export default BottomHelp
+
+
+
+
+
+
+const Button = () => {
+    return (
+        <div className="button">
+            <NavLink to="/" className="app-link">
+                <span>Call us now</span>
+                <img src={app_image('arrow-2.svg')} className="icon" alt="arrow-right"/>
+            </NavLink>
+        </div>
+    )
+}

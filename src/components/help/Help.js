@@ -3,14 +3,14 @@ import Row from 'react-bootstrap/Row';
 import { help_img, preloader } from '../File'
 import BottomHelp from './BottomHelp'
 import { NavLink } from 'react-router-dom'
-
+import HelpBanner from './HelpBanner'
 
 
 const Help = ({helpCategories}) => {
 
     return (
         <div className="help-container">
-            <TitleHeader/>
+            <HelpBanner/>
             <HelpBody helpCategories={helpCategories}/>
             <BottomHelp/>
         </div>
