@@ -63,7 +63,7 @@ const RightSide = () => {
 const Button = () => {
     return (
         <div className="button">
-            <NavLink to="/" className="app-link">
+            <NavLink to="/contact-us" className="app-link">
                 <span>Call us now</span>
                 <img src={app_image('arrow-2.svg')} className="icon" alt="arrow-right"/>
             </NavLink>

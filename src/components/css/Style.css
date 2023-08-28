@@ -501,6 +501,11 @@ p, li, h3{
     padding: 10px;
     transform: rotate(-50deg);
     background-color: #FDB813;
+} 
+@media only screen and (min-width: 1500px){
+    .home-banner-container{
+        width: 1300px;
+    }
 }
 @media only screen and (max-width: 992px){
     .home-banner-container .inner-banner .left .title-header h3{
@@ -669,6 +674,12 @@ p, li, h3{
     font-size: 30px;
     font-weight: bold;
 }
+@media only screen and (min-width: 1500px){
+    .services-contanier{
+        width: 1300px;
+    }
+}
+
 @media only screen and (max-width: 1125px){
     .services-contanier .right .content-item h3{
         font-size: 22px;
@@ -843,6 +854,12 @@ p, li, h3{
     padding: 10px;
     transform: rotate(-50deg);
     background-color: #FDB813;
+}
+
+@media only screen and (min-width: 1500px){
+    .qrcodes-contanier .qrcodes-inner{
+        width: 1300px;
+    }
 }
 @media only screen and (max-width: 992px){
     .qrcodes-contanier .qrcodes-left,
